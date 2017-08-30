@@ -1,0 +1,430 @@
+/*Reset all margins*/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/*Background Image*/
+
+html {
+	background: url("img/gradientBackground.jpeg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/*Navbar*/
+
+.navLeft {
+	position: fixed;
+	width: 25%;
+	height: 100%;
+	background: -webkit-linear-gradient(#16003d, #8343f6);
+	background: -o-linear-gradient(#16003d, #8343f6);
+	background: -moz-linear-gradient(#16003d, #8343f6);
+	background: linear-gradient(#16003d, #8343f6);
+	color: white;
+	-webkit-clip-path: polygon(0 0, 100% 0, 60% 100%, 0% 100%);
+	clip-path: polygon(0 0, 100% 0, 60% 100%, 0% 100%);
+}
+
+.navLeft a, .navLeft h1 {
+	font-family: 'Josefin Sans', sans-serif;
+	letter-spacing: 1px;
+	text-decoration: none;
+	color: white;
+	display: block;
+	line-height: 2.75;
+	font-size: 22px;
+	font-weight: normal;
+	display: inline;
+}
+
+.aparaviLogo {
+	padding: 5% 0 0 0;
+	margin: 0 auto 0 auto;
+	width: 80%;
+}
+
+.navLinks {
+	display: flex;
+	flex-direction: column;
+	margin: 10% 0 0 0;
+}
+
+.navLeft i {
+	padding: 0 5% 0 8%;
+}
+
+.caretIcon1 {
+	padding: 0 5% 0 4% !important;
+}
+
+.fa-lg {
+	vertical-align: 0;
+}
+
+.fa-sign-out {
+	font-size: 1.1em;
+}
+
+.navLinks a:hover, .navLinks h1:hover {
+	text-decoration: underline;
+}
+
+.activeNavLink {
+	background-color: rgba(255, 255, 255, .2);
+	box-shadow: 0px 5px 5px rgba(0, 0, 0, .2);
+}
+
+.miniNavLinks {
+	display: flex;
+	flex-direction: column;
+}
+
+.miniNavLinks a {
+	line-height: 1.25px;
+}
+
+.miniNavLinks h1 {
+	font-size: 14px;
+}
+
+.miniNavLinks i {
+	padding-left: 16%
+}
+
+.smallerIcon {
+	font-size: .7em;
+}
+
+.widthFix {
+	padding-left: 16.5% !important;
+	padding-right: 6% !important;
+}
+
+.widthFix2 {
+	padding-left: 16.5% !important;
+	padding-right: 5.75% !important;
+}
+
+/*Content*/
+
+.bodyContent {
+	margin-left: 25%;
+	width: 75%;
+	padding-top: 2.5%;
+}
+
+/*Dashboard*/
+
+.widget {
+	font-family: 'Roboto', sans-serif;
+	color: rgba(22, 0, 50, .6);
+	background-color: white;
+	display: inline-block;
+	padding: 1.5% 1.5% 1.5% 1.5%;
+	margin: 0 1.25% 2.5% 1.25%;
+	width: 19.25%;
+	border: 1px solid rgba(95, 89, 123, 0.15);
+	box-shadow: 5px 5px 10px rgba(95, 89, 123, 0.15);
+	text-align: right;
+	border-radius: 5px;
+}
+
+.widget h3 {
+	display: inline-block;
+	line-height: 1.75;
+	letter-spacing: 1px;
+	font-size: 22px;
+	padding-bottom: 10%;
+}
+
+.widget i {
+	float: left;
+	padding: 0 20% 0 0;
+}
+
+.widget p {
+	font-size: 16px;
+}
+
+div.widget i.fa-database:before {
+	background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);
+	background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);
+	background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);
+	background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);
+	color: transparent;
+	-webkit-background-clip: text;
+    background-clip: text;
+	font-size: .85em;
+}
+
+div.widget i.fa-file:before {
+	background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);
+	background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);
+	background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);
+	background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);
+	color: transparent;
+	-webkit-background-clip: text;
+    background-clip: text;
+	font-size: .85em;
+}
+
+div.widget i.fa-ambulance:before {
+	background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);
+	background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);
+	background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);
+	background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);
+	color: transparent;
+	-webkit-background-clip: text;
+    background-clip: text;
+	font-size: .85em;
+}
+
+div.widget i.fa-archive:before {
+	background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);
+	background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);
+	background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);
+	background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);
+	color: transparent;
+	-webkit-background-clip: text;
+    background-clip: text;
+	font-size: .85em;
+}
+
+div.widget i.fa-server:before {
+	background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);
+	background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);
+	background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);
+	background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);
+	color: transparent;
+	-webkit-background-clip: text;
+    background-clip: text;
+	font-size: .85em;
+}
+
+div.widget i.fa-desktop:before {
+	background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);
+	background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);
+	background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);
+	background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);
+	color: transparent;
+	-webkit-background-clip: text;
+    background-clip: text;
+	font-size: .85em;
+}
+
+div.widget i.fa-camera:before {
+	background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);
+	background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);
+	background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);
+	background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);
+	color: transparent;
+	-webkit-background-clip: text;
+    background-clip: text;
+	font-size: .85em;
+}
+
+div.widget i.fa-check:before {
+	background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);
+	background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);
+	background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);
+	background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);
+	color: transparent;
+	-webkit-background-clip: text;
+    background-clip: text;
+	font-size: .85em;
+}
+
+/*Dashboard Summary*/
+
+div.widgetWide {
+	font-family: 'Roboto', sans-serif;
+	color: rgba(22, 0, 50, .6);
+	width: 94%;
+	margin: 0 1.25% 2.5% 1.25%;
+	background-color: white;
+	display: inline-block;
+	border: 1px solid rgba(95, 89, 123, 0.15);
+	box-shadow: 5px 5px 10px rgba(95, 89, 123, 0.15);
+	padding: 1.5% 1.5%;
+	border-radius: 5px;
+}
+
+div.widgetWide h2 {
+	display: inline-block;
+	text-align: left;
+	margin: 0 2.5% 1.5% 0;
+}
+
+div.widgetWide i {
+	float: right;
+	margin-left: 2.5%;
+}
+
+.summaryInfoBox {
+	width: 145px;
+	text-align: center;
+	margin: 20px 0 0 0;
+	display: inline-block;
+}
+
+.summaryInfoTitle {
+	margin-bottom: 20px;
+}
+
+.circleChartOuter {
+	position: relative;
+	width:100px;
+    height:100px;
+    border-radius:50px;
+    font-size:14px;
+    line-height:100px;
+    text-align:center;
+	background: -webkit-linear-gradient(#2492b7, #2EFFDA);
+	background: -o-linear-gradient(#2492b7, #2EFFDA);
+	background: -moz-linear-gradient(#2492b7, #2EFFDA);
+	background: linear-gradient(#2492b7, #2EFFDA);
+	margin: 22.5px 22.5px;
+	-webkit-animation:spin 3s linear infinite;
+    -moz-animation:spin 3s linear infinite;
+    animation:spin 3s linear infinite;
+}
+
+.circleChartOuter2 {
+	position: relative;
+	width:100px;
+    height:100px;
+    border-radius:50px;
+    font-size:14px;
+    line-height:100px;
+    text-align:center;
+	background: gray;
+	background: gray;
+	background: gray;
+	background: gray;
+	margin: 22.5px 22.5px;
+	-webkit-animation:spin 3s linear infinite;
+    -moz-animation:spin 3s linear infinite;
+    animation:spin 3s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.circleChartInner {
+	position: absolute;
+	top: 6.25px;
+	left: 6.25px;
+	width:87.5px;
+    height:87.5px;
+    border-radius:43.75px;
+    line-height:87.5px;
+    background: white;
+	margin: auto auto;
+	-webkit-animation:spin2 3s linear infinite;
+	-moz-animation:spin2 3s linear infinite;
+	animation:spin2 3s linear infinite;
+}
+
+
+@-moz-keyframes spin2 { 100% { -moz-transform: rotate(-360deg); } }
+@-webkit-keyframes spin2 { 100% { -webkit-transform: rotate(-360deg); } }
+@keyframes spin2 { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
+
+.verticalLine {
+	position: absolute;
+	width: 2px;
+	margin: 20px 0 0 0;
+	height: 164px;
+	display: inline-block;
+	background-color: rgba(22, 0, 50, .1);
+}
+
+hr {
+	border: 1px solid rgba(22, 0, 50, .1);
+}
+
+/*Dashboard Health*/
+
+.widgetHalf {
+	font-family: 'Roboto', sans-serif;
+	color: rgba(22, 0, 50, .6);
+	width: 44.25%;
+	margin: 0 1.25% 2.5% 1.25%;
+	background-color: white;
+	display: inline-block;
+	border: 1px solid rgba(95, 89, 123, 0.15);
+	box-shadow: 5px 5px 10px rgba(95, 89, 123, 0.15);
+	padding: 1.5% 1.5%;
+	border-radius: 5px;
+	height: 370px;
+	overflow-y: scroll;
+}
+
+div.widgetHalf h2 {
+	display: inline-block;
+	text-align: left;
+}
+
+div.widgetHalf i {
+	float: right;
+	margin-left: 2.5%;
+}
+
+.healthWidget h3 {
+	font-family: 'Merriweather Sans', sans-serif;
+	display: inline-block;
+}
+
+
+.healthWidget i.fa-desktop:before {
+	background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);
+	background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);
+	background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);
+	background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);
+	color: transparent;
+	-webkit-background-clip: text;
+    background-clip: text;
+}
+
+.healthWidget i.fa-desktop {
+	float: left;
+	padding: 5px 12.5px 0 0;
+	margin-left: 0;
+}
+
+
+.healthWidget p {
+	font-size: 12px;
+	display: inline-block;
+}
+
+p.offlineBG {
+	font-family: 'Merriweather Sans', sans-serif;
+	font-size: 12px;
+	background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);
+	background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);
+	background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);
+	background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);
+	display: inline-block;
+	padding: 1% 2%;
+	color: white;
+	border-radius: 25px;
+}
+
+.floatRight {
+	float: right;
+}
+
+.moveUp {
+	margin-top: -3%;
+	margin-right: 40px;
+}
+
+.healthHR {
+	margin: 20px 0 20px 0;;
+}
