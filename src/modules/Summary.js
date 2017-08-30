@@ -7,11 +7,13 @@ export default class Summary extends Component {
 	render(){
 		return(
 			<div className="widgetWide">
-                <h2>Summary</h2>
-                <h2>History</h2>
-                <i className="fa fa-caret-down fa-2x" aria-hidden="true"></i>
-                <i className="fa fa-cog fa-2x" aria-hidden="true"></i>
-                <hr/>
+                <div className="summaryHeader">
+                    <h2>Summary</h2>
+                    <h2>History</h2>
+                    <i className="fa fa-caret-down fa-2x" aria-hidden="true"></i>
+                    <i className="fa fa-cog fa-2x" aria-hidden="true"></i>
+                    <hr/>
+                </div>
                 <div className="summaryInfo">
                     <div className="summaryInfoBox">
                         <p className="summaryInfoTitle">Recovery Tasks</p>

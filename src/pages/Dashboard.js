@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Navbar, DataProtected, FilesProtected, Recoveries, Archives, Appliances, Agents, Snapshots, Checkpoints, Summary, Health } from '../modules'
+import { Navbar, DataProtected, FilesProtected, Recoveries, Archives, Appliances, Agents, Snapshots, Checkpoints, Summary, Health, LiveFeed } from '../modules'
 
 export default class Dashboard extends Component {
 
@@ -18,7 +18,7 @@ export default class Dashboard extends Component {
 					<Checkpoints/>
 					<Summary/>
 					<Health/>
-					<Health/>
+					<LiveFeed/>
 				</div>
 			</div>
 		)

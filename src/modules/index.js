@@ -12,6 +12,7 @@ import Checkpoints from './Checkpoints'
 import TBD from './TBD'
 import Summary from './Summary'
 import Health from './Health'
+import LiveFeed from './LiveFeed'
 
 
 
@@ -29,6 +30,7 @@ export {
     Checkpoints,
     TBD,
     Summary,
-    Health
+    Health,
+    LiveFeed
 
 }
