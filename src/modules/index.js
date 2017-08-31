@@ -13,11 +13,13 @@ import TBD from './TBD'
 import Summary from './Summary'
 import Health from './Health'
 import LiveFeed from './LiveFeed'
+import NavCircle from './NavCircle'
 
 
 
 export {
     Navbar,
+    NavCircle,
     DataProtected,
     AdminNav,
     SettingsNav,

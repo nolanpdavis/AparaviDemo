@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 require('../styles/main.css')
 
 export default class App extends Component {
+    
     render(){
         return(
             <BrowserRouter>
