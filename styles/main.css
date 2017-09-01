@@ -162,12 +162,17 @@ html {
     border-radius:50px;
     font-size:14px;
     line-height:100px;
-	border: 3px solid #FF9012;
     text-align:center;
 	z-index: 2;
-	background-color: #ffffff;
+	background: -webkit-linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);
+	background: -o-linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);
+	background: -moz-linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);
+	background: linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);
+	border: .5px solid white;
 	margin: 80vh 0 0 3.5vw;
 	box-shadow: 5px 5px 10px rgba(95, 89, 123, 0.15);
+	transform: rotateY(0deg);
+	transition: transform .25s;
 }
 
 .navCircleRight:hover {
@@ -181,17 +186,80 @@ html {
     border-radius:50px;
     font-size:14px;
     line-height:100px;
-	border: 3px solid #FF9012;
     text-align:center;
+	border: .5px solid white;
 	z-index: 2;
-	background-color: #ffffff;
+	background: -webkit-linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);
+	background: -o-linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);
+	background: -moz-linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);
+	background: linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);
 	margin: 80vh 0 0 3.5vw;
-	box-shadow: 5px 5px 10px rgba(95, 89, 123, 0.15);
+	box-shadow: 5px 5px 10px rgba(95, 89, 123, 0.2);
+	transform: rotateY(180deg);
+	transition: transform .25s;
 }
+
+
 
 .navCircleLeft:hover {
 	cursor: pointer;
 }
+
+.navCircleRight div.bar1 {
+	position: absolute;
+	height: 50px;
+	width: 7.5px;
+	background-color: white;
+	top: 25%;
+	left: 47%;
+	transform: rotate(45deg);
+	border-radius: 5%;
+}
+
+.navCircleRight div.bar2 {
+	position: absolute;
+	height: 50px;
+	width: 7.5px;
+	background-color: white;
+	top: 25%;
+	left: 47%;
+	transform: rotate(-45deg);
+	border-radius: 5%;
+}
+
+.navCircleLeft div.bar1 {
+	position: absolute;
+	height: 50px;
+	width: 7.5px;
+	border-radius: 10%;
+	background-color: white;
+	top: 9%;
+	left: 44.5%;
+	transform: rotate(90deg);
+}
+
+.navCircleLeft div.bar2 {
+	position: absolute;
+	height: 50px;
+	width: 7.5px;
+	border-radius: 10%;
+	background-color: white;
+	top: 25%;
+	left: 44.5%;
+	transform: rotate(90deg);
+}
+
+.navCircleLeft div.bar3 {
+	position: absolute;
+	height: 50px;
+	width: 7.5px;
+	border-radius: 10%;
+	background-color: white;
+	top: 41%;
+	left: 44.5%;
+	transform: rotate(90deg);
+}
+
 
 /*Content*/
 

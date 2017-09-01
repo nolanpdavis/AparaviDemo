@@ -15,14 +15,16 @@ export default class Navbar extends Component {
 	handleAdminClick(event) {
 		event.preventDefault()
 		this.setState({
-            adminIsClicked: !this.state.adminIsClicked
+            adminIsClicked: !this.state.adminIsClicked,
+			settingsIsClicked: false
         })
 	}
 
 	handleSettingsClick(event) {
 		event.preventDefault()
 		this.setState({
-            settingsIsClicked: !this.state.settingsIsClicked
+            settingsIsClicked: !this.state.settingsIsClicked,
+			adminIsClicked: false
         })
 	}
 
