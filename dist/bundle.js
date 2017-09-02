@@ -1949,7 +1949,7 @@ function getPooledWarningPropertyDefinition(propName, getVal) {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.LiveFeed = exports.Health = exports.Summary = exports.TBD = exports.Checkpoints = exports.Snapshots = exports.Agents = exports.Appliances = exports.Archives = exports.Recoveries = exports.FilesProtected = exports.SettingsNav = exports.AdminNav = exports.DataProtected = exports.NavCircle = exports.Navbar = undefined;
+exports.Logo = exports.LiveFeed = exports.Health = exports.Summary = exports.TBD = exports.Checkpoints = exports.Snapshots = exports.Agents = exports.Appliances = exports.Archives = exports.Recoveries = exports.FilesProtected = exports.SettingsNav = exports.AdminNav = exports.DataProtected = exports.NavCircle = exports.Navbar = undefined;
 
 var _Navbar = __webpack_require__(200);
 
@@ -2015,6 +2015,10 @@ var _NavCircle = __webpack_require__(243);
 
 var _NavCircle2 = _interopRequireDefault(_NavCircle);
 
+var _Logo = __webpack_require__(257);
+
+var _Logo2 = _interopRequireDefault(_Logo);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.Navbar = _Navbar2.default;
@@ -2033,6 +2037,7 @@ exports.TBD = _TBD2.default;
 exports.Summary = _Summary2.default;
 exports.Health = _Health2.default;
 exports.LiveFeed = _LiveFeed2.default;
+exports.Logo = _Logo2.default;
 
 /***/ }),
 /* 18 */
@@ -26874,7 +26879,7 @@ exports.default = TBD;
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+	value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -26894,178 +26899,190 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var Summary = function (_Component) {
-    _inherits(Summary, _Component);
+	_inherits(Summary, _Component);
 
-    function Summary() {
-        _classCallCheck(this, Summary);
+	function Summary() {
+		_classCallCheck(this, Summary);
 
-        return _possibleConstructorReturn(this, (Summary.__proto__ || Object.getPrototypeOf(Summary)).apply(this, arguments));
-    }
+		var _this = _possibleConstructorReturn(this, (Summary.__proto__ || Object.getPrototypeOf(Summary)).call(this));
 
-    _createClass(Summary, [{
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                'div',
-                { className: 'widgetWide' },
-                _react2.default.createElement(
-                    'div',
-                    { className: 'summaryHeader' },
-                    _react2.default.createElement(
-                        'h2',
-                        null,
-                        'Summary'
-                    ),
-                    _react2.default.createElement(
-                        'h2',
-                        null,
-                        'History'
-                    ),
-                    _react2.default.createElement('i', { className: 'fa fa-caret-down fa-2x', 'aria-hidden': 'true' }),
-                    _react2.default.createElement('i', { className: 'fa fa-cog fa-2x', 'aria-hidden': 'true' }),
-                    _react2.default.createElement('hr', null)
-                ),
-                _react2.default.createElement(
-                    'div',
-                    { className: 'summaryInfo' },
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'summaryInfoBox' },
-                        _react2.default.createElement(
-                            'p',
-                            { className: 'summaryInfoTitle' },
-                            'Recovery Tasks'
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'circleChartOuter' },
-                            _react2.default.createElement(
-                                'p',
-                                { className: 'circleChartInner' },
-                                '100%'
-                            )
-                        )
-                    ),
-                    _react2.default.createElement('div', { className: 'verticalLine' }),
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'summaryInfoBox' },
-                        _react2.default.createElement(
-                            'p',
-                            { className: 'summaryInfoTitle' },
-                            'Archive Tasks'
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'circleChartOuter' },
-                            _react2.default.createElement(
-                                'p',
-                                { className: 'circleChartInner' },
-                                '100%'
-                            )
-                        )
-                    ),
-                    _react2.default.createElement('div', { className: 'verticalLine' }),
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'summaryInfoBox' },
-                        _react2.default.createElement(
-                            'p',
-                            { className: 'summaryInfoTitle' },
-                            'Store Tasks'
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'circleChartOuter' },
-                            _react2.default.createElement(
-                                'p',
-                                { className: 'circleChartInner' },
-                                '100%'
-                            )
-                        )
-                    ),
-                    _react2.default.createElement('div', { className: 'verticalLine' }),
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'summaryInfoBox' },
-                        _react2.default.createElement(
-                            'p',
-                            { className: 'summaryInfoTitle' },
-                            'Pruning Tasks'
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'circleChartOuter' },
-                            _react2.default.createElement(
-                                'p',
-                                { className: 'circleChartInner' },
-                                '100%'
-                            )
-                        )
-                    ),
-                    _react2.default.createElement('div', { className: 'verticalLine' }),
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'summaryInfoBox' },
-                        _react2.default.createElement(
-                            'p',
-                            { className: 'summaryInfoTitle' },
-                            'Storage Locations'
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'circleChartOuter2' },
-                            _react2.default.createElement(
-                                'p',
-                                { className: 'circleChartInner' },
-                                '9508GB'
-                            )
-                        )
-                    ),
-                    _react2.default.createElement('div', { className: 'verticalLine' }),
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'summaryInfoBox' },
-                        _react2.default.createElement(
-                            'p',
-                            { className: 'summaryInfoTitle' },
-                            '% Archive Changed'
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'circleChartOuter2' },
-                            _react2.default.createElement(
-                                'p',
-                                { className: 'circleChartInner' },
-                                '5%'
-                            )
-                        )
-                    ),
-                    _react2.default.createElement('div', { className: 'verticalLine' }),
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'summaryInfoBox' },
-                        _react2.default.createElement(
-                            'p',
-                            { className: 'summaryInfoTitle' },
-                            '% Store Changed'
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'circleChartOuter2' },
-                            _react2.default.createElement(
-                                'p',
-                                { className: 'circleChartInner' },
-                                '26%'
-                            )
-                        )
-                    )
-                )
-            );
-        }
-    }]);
+		_this.state = {
+			displayIsOpen: true
+		};
+		return _this;
+	}
 
-    return Summary;
+	_createClass(Summary, [{
+		key: 'handleClick',
+		value: function handleClick() {
+			this.setState({
+				displayIsOpen: !this.state.displayIsOpen
+			});
+		}
+	}, {
+		key: 'render',
+		value: function render() {
+			return _react2.default.createElement(
+				'div',
+				{ className: 'widgetWide' },
+				_react2.default.createElement(
+					'div',
+					{ className: 'summaryHeader' },
+					_react2.default.createElement(
+						'h2',
+						null,
+						'Summary'
+					),
+					_react2.default.createElement(
+						'h2',
+						null,
+						'History'
+					),
+					this.state.displayIsOpen ? _react2.default.createElement('i', { className: 'fa fa-caret-down fa-2x', 'aria-hidden': 'true', onClick: this.handleClick.bind(this) }) : _react2.default.createElement('i', { className: 'fa fa-caret-right fa-2x', 'aria-hidden': 'true', onClick: this.handleClick.bind(this) }),
+					_react2.default.createElement('i', { className: 'fa fa-cog fa-2x', 'aria-hidden': 'true' }),
+					this.state.displayIsOpen ? _react2.default.createElement('hr', null) : null
+				),
+				this.state.displayIsOpen ? _react2.default.createElement(
+					'div',
+					{ className: 'summaryInfo' },
+					_react2.default.createElement(
+						'div',
+						{ className: 'summaryInfoBox' },
+						_react2.default.createElement(
+							'p',
+							{ className: 'summaryInfoTitle' },
+							'Recovery Tasks'
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'circleChartOuter' },
+							_react2.default.createElement(
+								'p',
+								{ className: 'circleChartInner' },
+								'100%'
+							)
+						)
+					),
+					_react2.default.createElement('div', { className: 'verticalLine' }),
+					_react2.default.createElement(
+						'div',
+						{ className: 'summaryInfoBox' },
+						_react2.default.createElement(
+							'p',
+							{ className: 'summaryInfoTitle' },
+							'Archive Tasks'
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'circleChartOuter' },
+							_react2.default.createElement(
+								'p',
+								{ className: 'circleChartInner' },
+								'100%'
+							)
+						)
+					),
+					_react2.default.createElement('div', { className: 'verticalLine' }),
+					_react2.default.createElement(
+						'div',
+						{ className: 'summaryInfoBox' },
+						_react2.default.createElement(
+							'p',
+							{ className: 'summaryInfoTitle' },
+							'Store Tasks'
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'circleChartOuter' },
+							_react2.default.createElement(
+								'p',
+								{ className: 'circleChartInner' },
+								'100%'
+							)
+						)
+					),
+					_react2.default.createElement('div', { className: 'verticalLine' }),
+					_react2.default.createElement(
+						'div',
+						{ className: 'summaryInfoBox' },
+						_react2.default.createElement(
+							'p',
+							{ className: 'summaryInfoTitle' },
+							'Pruning Tasks'
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'circleChartOuter' },
+							_react2.default.createElement(
+								'p',
+								{ className: 'circleChartInner' },
+								'100%'
+							)
+						)
+					),
+					_react2.default.createElement('div', { className: 'verticalLine' }),
+					_react2.default.createElement(
+						'div',
+						{ className: 'summaryInfoBox' },
+						_react2.default.createElement(
+							'p',
+							{ className: 'summaryInfoTitle' },
+							'Storage Locations'
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'circleChartOuter2' },
+							_react2.default.createElement(
+								'p',
+								{ className: 'circleChartInner' },
+								'9508GB'
+							)
+						)
+					),
+					_react2.default.createElement('div', { className: 'verticalLine' }),
+					_react2.default.createElement(
+						'div',
+						{ className: 'summaryInfoBox' },
+						_react2.default.createElement(
+							'p',
+							{ className: 'summaryInfoTitle' },
+							'% Archive Changed'
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'circleChartOuter2' },
+							_react2.default.createElement(
+								'p',
+								{ className: 'circleChartInner' },
+								'5%'
+							)
+						)
+					),
+					_react2.default.createElement('div', { className: 'verticalLine' }),
+					_react2.default.createElement(
+						'div',
+						{ className: 'summaryInfoBox' },
+						_react2.default.createElement(
+							'p',
+							{ className: 'summaryInfoTitle' },
+							'% Store Changed'
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'circleChartOuter2' },
+							_react2.default.createElement(
+								'p',
+								{ className: 'circleChartInner' },
+								'26%'
+							)
+						)
+					)
+				) : null
+			);
+		}
+	}]);
+
+	return Summary;
 }(_react.Component);
 
 exports.default = Summary;
@@ -27078,7 +27095,7 @@ exports.default = Summary;
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+	value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -27098,237 +27115,249 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var Health = function (_Component) {
-  _inherits(Health, _Component);
+	_inherits(Health, _Component);
 
-  function Health() {
-    _classCallCheck(this, Health);
+	function Health() {
+		_classCallCheck(this, Health);
 
-    return _possibleConstructorReturn(this, (Health.__proto__ || Object.getPrototypeOf(Health)).apply(this, arguments));
-  }
+		var _this = _possibleConstructorReturn(this, (Health.__proto__ || Object.getPrototypeOf(Health)).call(this));
 
-  _createClass(Health, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        { className: 'widgetHalf healthWidget' },
-        _react2.default.createElement(
-          'div',
-          { className: 'fixedHeader' },
-          _react2.default.createElement(
-            'h2',
-            null,
-            'Health'
-          ),
-          _react2.default.createElement('i', { className: 'fa fa-caret-down fa-2x', 'aria-hidden': 'true' }),
-          _react2.default.createElement('hr', { className: 'healthHR healthHR2' })
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'healthContent' },
-          _react2.default.createElement('i', { className: 'fa fa-desktop fa-2x', 'aria-hidden': 'true' }),
-          _react2.default.createElement(
-            'h3',
-            null,
-            'nate-vr agent'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'offlineBG floatRight' },
-            'Offline 5 Days, 13 Hours'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'indent' },
-            'Beta - APARAVI/Nate/Nate-server appliance'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'floatRight moveUp' },
-            '10 Tasks with errors'
-          ),
-          _react2.default.createElement('hr', { className: 'healthHR' }),
-          _react2.default.createElement('i', { className: 'fa fa-desktop fa-2x', 'aria-hidden': 'true' }),
-          _react2.default.createElement(
-            'h3',
-            null,
-            'Jack\'s Machine (Q4J)'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'offlineBG floatRight' },
-            'Offline 34 Days, 17 Hours'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'indent' },
-            'Beta - APARAVI/NovaStor/Production/AG-HyperV12 appliance'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'floatRight moveUp' },
-            '0 Tasks with errors'
-          ),
-          _react2.default.createElement('hr', { className: 'healthHR' }),
-          _react2.default.createElement('i', { className: 'fa fa-desktop fa-2x', 'aria-hidden': 'true' }),
-          _react2.default.createElement(
-            'h3',
-            null,
-            'ag-backupserver agent'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'offlineBG floatRight' },
-            'Offline 5 Days, 13 Hours'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'indent' },
-            'Beta - APARAVI/NovaStor/Production/AG-HyperV12 appliance'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'floatRight moveUp' },
-            '10 Tasks with errors'
-          ),
-          _react2.default.createElement('hr', { className: 'healthHR' }),
-          _react2.default.createElement('i', { className: 'fa fa-desktop fa-2x', 'aria-hidden': 'true' }),
-          _react2.default.createElement(
-            'h3',
-            null,
-            'ag-ws-kurt agent'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'offlineBG floatRight' },
-            'Offline 34 Days, 19 Hours'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'indent' },
-            'Beta - APARAVI/NovaStor/Production/AG-HyperV12 appliance'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'floatRight moveUp' },
-            '0 Tasks with errors'
-          ),
-          _react2.default.createElement('hr', { className: 'healthHR' }),
-          _react2.default.createElement('i', { className: 'fa fa-desktop fa-2x', 'aria-hidden': 'true' }),
-          _react2.default.createElement(
-            'h3',
-            null,
-            'nate-tablet agent'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'offlineBG floatRight' },
-            'Offline 56 Days, 4 Hours'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'indent' },
-            'Beta - APARAVI/Nate/Nate-server appliance'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'floatRight moveUp' },
-            '0 Tasks with errors'
-          ),
-          _react2.default.createElement('hr', { className: 'healthHR' }),
-          _react2.default.createElement('i', { className: 'fa fa-desktop fa-2x', 'aria-hidden': 'true' }),
-          _react2.default.createElement(
-            'h3',
-            null,
-            'Jack\'s Machine (Q4J)'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'offlineBG floatRight' },
-            'Offline 34 Days, 17 Hours'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'indent' },
-            'Beta - APARAVI/NovaStor/Production/AG-HyperV12 appliance'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'floatRight moveUp' },
-            '0 Tasks with errors'
-          ),
-          _react2.default.createElement('hr', { className: 'healthHR' }),
-          _react2.default.createElement('i', { className: 'fa fa-desktop fa-2x', 'aria-hidden': 'true' }),
-          _react2.default.createElement(
-            'h3',
-            null,
-            'ag-backupserver agent'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'offlineBG floatRight' },
-            'Offline 5 Days, 13 Hours'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'indent' },
-            'Beta - APARAVI/NovaStor/Production/AG-HyperV12 appliance'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'floatRight moveUp' },
-            '10 Tasks with errors'
-          ),
-          _react2.default.createElement('hr', { className: 'healthHR' }),
-          _react2.default.createElement('i', { className: 'fa fa-desktop fa-2x', 'aria-hidden': 'true' }),
-          _react2.default.createElement(
-            'h3',
-            null,
-            'ag-ws-kurt agent'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'offlineBG floatRight' },
-            'Offline 34 Days, 19 Hours'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'indent' },
-            'Beta - APARAVI/NovaStor/Production/AG-HyperV12 appliance'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'floatRight moveUp' },
-            '0 Tasks with errors'
-          ),
-          _react2.default.createElement('hr', { className: 'healthHR' }),
-          _react2.default.createElement('i', { className: 'fa fa-desktop fa-2x', 'aria-hidden': 'true' }),
-          _react2.default.createElement(
-            'h3',
-            null,
-            'nate-tablet agent'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'offlineBG floatRight' },
-            'Offline 56 Days, 4 Hours'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'indent' },
-            'Beta - APARAVI/Nate/Nate-server appliance'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'floatRight moveUp' },
-            '0 Tasks with errors'
-          )
-        )
-      );
-    }
-  }]);
+		_this.state = {
+			displayIsOpen: true
+		};
+		return _this;
+	}
 
-  return Health;
+	_createClass(Health, [{
+		key: 'handleClick',
+		value: function handleClick() {
+			this.setState({
+				displayIsOpen: !this.state.displayIsOpen
+			});
+		}
+	}, {
+		key: 'render',
+		value: function render() {
+			return _react2.default.createElement(
+				'div',
+				{ className: this.state.displayIsOpen ? "healthWidget widgetHalf" : "widgetHalf healthWidgetClosed" },
+				_react2.default.createElement(
+					'div',
+					{ className: 'fixedHeader' },
+					_react2.default.createElement(
+						'h2',
+						null,
+						'Health'
+					),
+					this.state.displayIsOpen ? _react2.default.createElement('i', { className: 'fa fa-caret-down fa-2x', 'aria-hidden': 'true', onClick: this.handleClick.bind(this) }) : _react2.default.createElement('i', { className: 'fa fa-caret-right fa-2x', 'aria-hidden': 'true', onClick: this.handleClick.bind(this) }),
+					this.state.displayIsOpen ? _react2.default.createElement('hr', { className: 'healthHR healthHR2' }) : null
+				),
+				this.state.displayIsOpen ? _react2.default.createElement(
+					'div',
+					{ className: 'healthContent' },
+					_react2.default.createElement('i', { className: 'fa fa-desktop fa-2x', 'aria-hidden': 'true' }),
+					_react2.default.createElement(
+						'h3',
+						null,
+						'nate-vr agent'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'offlineBG floatRight' },
+						'Offline 5 Days, 13 Hours'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'indent' },
+						'Beta - APARAVI/Nate/Nate-server appliance'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'floatRight moveUp' },
+						'10 Tasks with errors'
+					),
+					_react2.default.createElement('hr', { className: 'healthHR' }),
+					_react2.default.createElement('i', { className: 'fa fa-desktop fa-2x', 'aria-hidden': 'true' }),
+					_react2.default.createElement(
+						'h3',
+						null,
+						'Jack\'s Machine (Q4J)'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'offlineBG floatRight' },
+						'Offline 34 Days, 17 Hours'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'indent' },
+						'Beta - APARAVI/NovaStor/Production/AG-HyperV12 appliance'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'floatRight moveUp' },
+						'0 Tasks with errors'
+					),
+					_react2.default.createElement('hr', { className: 'healthHR' }),
+					_react2.default.createElement('i', { className: 'fa fa-desktop fa-2x', 'aria-hidden': 'true' }),
+					_react2.default.createElement(
+						'h3',
+						null,
+						'ag-backupserver agent'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'offlineBG floatRight' },
+						'Offline 5 Days, 13 Hours'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'indent' },
+						'Beta - APARAVI/NovaStor/Production/AG-HyperV12 appliance'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'floatRight moveUp' },
+						'10 Tasks with errors'
+					),
+					_react2.default.createElement('hr', { className: 'healthHR' }),
+					_react2.default.createElement('i', { className: 'fa fa-desktop fa-2x', 'aria-hidden': 'true' }),
+					_react2.default.createElement(
+						'h3',
+						null,
+						'ag-ws-kurt agent'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'offlineBG floatRight' },
+						'Offline 34 Days, 19 Hours'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'indent' },
+						'Beta - APARAVI/NovaStor/Production/AG-HyperV12 appliance'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'floatRight moveUp' },
+						'0 Tasks with errors'
+					),
+					_react2.default.createElement('hr', { className: 'healthHR' }),
+					_react2.default.createElement('i', { className: 'fa fa-desktop fa-2x', 'aria-hidden': 'true' }),
+					_react2.default.createElement(
+						'h3',
+						null,
+						'nate-tablet agent'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'offlineBG floatRight' },
+						'Offline 56 Days, 4 Hours'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'indent' },
+						'Beta - APARAVI/Nate/Nate-server appliance'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'floatRight moveUp' },
+						'0 Tasks with errors'
+					),
+					_react2.default.createElement('hr', { className: 'healthHR' }),
+					_react2.default.createElement('i', { className: 'fa fa-desktop fa-2x', 'aria-hidden': 'true' }),
+					_react2.default.createElement(
+						'h3',
+						null,
+						'Jack\'s Machine (Q4J)'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'offlineBG floatRight' },
+						'Offline 34 Days, 17 Hours'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'indent' },
+						'Beta - APARAVI/NovaStor/Production/AG-HyperV12 appliance'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'floatRight moveUp' },
+						'0 Tasks with errors'
+					),
+					_react2.default.createElement('hr', { className: 'healthHR' }),
+					_react2.default.createElement('i', { className: 'fa fa-desktop fa-2x', 'aria-hidden': 'true' }),
+					_react2.default.createElement(
+						'h3',
+						null,
+						'ag-backupserver agent'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'offlineBG floatRight' },
+						'Offline 5 Days, 13 Hours'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'indent' },
+						'Beta - APARAVI/NovaStor/Production/AG-HyperV12 appliance'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'floatRight moveUp' },
+						'10 Tasks with errors'
+					),
+					_react2.default.createElement('hr', { className: 'healthHR' }),
+					_react2.default.createElement('i', { className: 'fa fa-desktop fa-2x', 'aria-hidden': 'true' }),
+					_react2.default.createElement(
+						'h3',
+						null,
+						'ag-ws-kurt agent'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'offlineBG floatRight' },
+						'Offline 34 Days, 19 Hours'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'indent' },
+						'Beta - APARAVI/NovaStor/Production/AG-HyperV12 appliance'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'floatRight moveUp' },
+						'0 Tasks with errors'
+					),
+					_react2.default.createElement('hr', { className: 'healthHR' }),
+					_react2.default.createElement('i', { className: 'fa fa-desktop fa-2x', 'aria-hidden': 'true' }),
+					_react2.default.createElement(
+						'h3',
+						null,
+						'nate-tablet agent'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'offlineBG floatRight' },
+						'Offline 56 Days, 4 Hours'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'indent' },
+						'Beta - APARAVI/Nate/Nate-server appliance'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'floatRight moveUp' },
+						'0 Tasks with errors'
+					)
+				) : null
+			);
+		}
+	}]);
+
+	return Health;
 }(_react.Component);
 
 exports.default = Health;
@@ -27341,7 +27370,7 @@ exports.default = Health;
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+	value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -27361,237 +27390,249 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var LiveFeed = function (_Component) {
-  _inherits(LiveFeed, _Component);
+	_inherits(LiveFeed, _Component);
 
-  function LiveFeed() {
-    _classCallCheck(this, LiveFeed);
+	function LiveFeed() {
+		_classCallCheck(this, LiveFeed);
 
-    return _possibleConstructorReturn(this, (LiveFeed.__proto__ || Object.getPrototypeOf(LiveFeed)).apply(this, arguments));
-  }
+		var _this = _possibleConstructorReturn(this, (LiveFeed.__proto__ || Object.getPrototypeOf(LiveFeed)).call(this));
 
-  _createClass(LiveFeed, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        { className: 'widgetHalf healthWidget' },
-        _react2.default.createElement(
-          'div',
-          { className: 'fixedHeader' },
-          _react2.default.createElement(
-            'h2',
-            null,
-            'Live Feed'
-          ),
-          _react2.default.createElement('i', { className: 'fa fa-caret-down fa-2x', 'aria-hidden': 'true' }),
-          _react2.default.createElement('hr', { className: 'healthHR healthHR2' })
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'liveFeedContent' },
-          _react2.default.createElement('i', { className: 'fa fa-server fa-2x', 'aria-hidden': 'true' }),
-          _react2.default.createElement(
-            'h3',
-            null,
-            'nate-vr agent'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'completedBG floatRight' },
-            'Completed'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'indent' },
-            'Beta - APARAVI/Nate/Nate-server appliance'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'floatRight moveUp2' },
-            '10 Tasks with errors'
-          ),
-          _react2.default.createElement('hr', { className: 'healthHR' }),
-          _react2.default.createElement('i', { className: 'fa fa-server fa-2x', 'aria-hidden': 'true' }),
-          _react2.default.createElement(
-            'h3',
-            null,
-            'Jack\'s Machine (Q4J)'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'completedBG floatRight' },
-            'Completed'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'indent' },
-            'Beta - APARAVI/NovaStor/Production/AG-HyperV12 appliance'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'floatRight moveUp2' },
-            '0 Tasks with errors'
-          ),
-          _react2.default.createElement('hr', { className: 'healthHR' }),
-          _react2.default.createElement('i', { className: 'fa fa-server fa-2x', 'aria-hidden': 'true' }),
-          _react2.default.createElement(
-            'h3',
-            null,
-            'ag-backupserver agent'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'completedBG floatRight' },
-            'Completed'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'indent' },
-            'Beta - APARAVI/NovaStor/Production/AG-HyperV12 appliance'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'floatRight moveUp2' },
-            '10 Tasks with errors'
-          ),
-          _react2.default.createElement('hr', { className: 'healthHR' }),
-          _react2.default.createElement('i', { className: 'fa fa-server fa-2x', 'aria-hidden': 'true' }),
-          _react2.default.createElement(
-            'h3',
-            null,
-            'ag-ws-kurt agent'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'completedBG floatRight' },
-            'Completed'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'indent' },
-            'Beta - APARAVI/NovaStor/Production/AG-HyperV12 appliance'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'floatRight moveUp2' },
-            '0 Tasks with errors'
-          ),
-          _react2.default.createElement('hr', { className: 'healthHR' }),
-          _react2.default.createElement('i', { className: 'fa fa-server fa-2x', 'aria-hidden': 'true' }),
-          _react2.default.createElement(
-            'h3',
-            null,
-            'nate-tablet agent'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'completedBG floatRight' },
-            'Completed'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'indent' },
-            'Beta - APARAVI/Nate/Nate-server appliance'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'floatRight moveUp2' },
-            '0 Tasks with errors'
-          ),
-          _react2.default.createElement('hr', { className: 'healthHR' }),
-          _react2.default.createElement('i', { className: 'fa fa-server fa-2x', 'aria-hidden': 'true' }),
-          _react2.default.createElement(
-            'h3',
-            null,
-            'Jack\'s Machine (Q4J)'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'completedBG floatRight' },
-            'Completed'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'indent' },
-            'Beta - APARAVI/NovaStor/Production/AG-HyperV12 appliance'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'floatRight moveUp2' },
-            '0 Tasks with errors'
-          ),
-          _react2.default.createElement('hr', { className: 'healthHR' }),
-          _react2.default.createElement('i', { className: 'fa fa-server fa-2x', 'aria-hidden': 'true' }),
-          _react2.default.createElement(
-            'h3',
-            null,
-            'ag-backupserver agent'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'completedBG floatRight' },
-            'Completed'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'indent' },
-            'Beta - APARAVI/NovaStor/Production/AG-HyperV12 appliance'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'floatRight moveUp2' },
-            '10 Tasks with errors'
-          ),
-          _react2.default.createElement('hr', { className: 'healthHR' }),
-          _react2.default.createElement('i', { className: 'fa fa-server fa-2x', 'aria-hidden': 'true' }),
-          _react2.default.createElement(
-            'h3',
-            null,
-            'ag-ws-kurt agent'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'completedBG floatRight' },
-            'Completed'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'indent' },
-            'Beta - APARAVI/NovaStor/Production/AG-HyperV12 appliance'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'floatRight moveUp2' },
-            '0 Tasks with errors'
-          ),
-          _react2.default.createElement('hr', { className: 'healthHR' }),
-          _react2.default.createElement('i', { className: 'fa fa-server fa-2x', 'aria-hidden': 'true' }),
-          _react2.default.createElement(
-            'h3',
-            null,
-            'nate-tablet agent'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'completedBG floatRight' },
-            'Completed'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'indent' },
-            'Beta - APARAVI/Nate/Nate-server appliance'
-          ),
-          _react2.default.createElement(
-            'p',
-            { className: 'floatRight moveUp2' },
-            '0 Tasks with errors'
-          )
-        )
-      );
-    }
-  }]);
+		_this.state = {
+			displayIsOpen: true
+		};
+		return _this;
+	}
 
-  return LiveFeed;
+	_createClass(LiveFeed, [{
+		key: 'handleClick',
+		value: function handleClick() {
+			this.setState({
+				displayIsOpen: !this.state.displayIsOpen
+			});
+		}
+	}, {
+		key: 'render',
+		value: function render() {
+			return _react2.default.createElement(
+				'div',
+				{ className: this.state.displayIsOpen ? "healthWidget widgetHalf" : "widgetHalf healthWidgetClosed" },
+				_react2.default.createElement(
+					'div',
+					{ className: 'fixedHeader' },
+					_react2.default.createElement(
+						'h2',
+						null,
+						'Live Feed'
+					),
+					this.state.displayIsOpen ? _react2.default.createElement('i', { className: 'fa fa-caret-down fa-2x', 'aria-hidden': 'true', onClick: this.handleClick.bind(this) }) : _react2.default.createElement('i', { className: 'fa fa-caret-right fa-2x', 'aria-hidden': 'true', onClick: this.handleClick.bind(this) }),
+					this.state.displayIsOpen ? _react2.default.createElement('hr', { className: 'healthHR healthHR2' }) : null
+				),
+				this.state.displayIsOpen ? _react2.default.createElement(
+					'div',
+					{ className: 'liveFeedContent' },
+					_react2.default.createElement('i', { className: 'fa fa-server fa-2x', 'aria-hidden': 'true' }),
+					_react2.default.createElement(
+						'h3',
+						null,
+						'nate-vr agent'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'completedBG floatRight' },
+						'Completed'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'indent' },
+						'Beta - APARAVI/Nate/Nate-server appliance'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'floatRight moveUp2' },
+						'10 Tasks with errors'
+					),
+					_react2.default.createElement('hr', { className: 'healthHR' }),
+					_react2.default.createElement('i', { className: 'fa fa-server fa-2x', 'aria-hidden': 'true' }),
+					_react2.default.createElement(
+						'h3',
+						null,
+						'Jack\'s Machine (Q4J)'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'completedBG floatRight' },
+						'Completed'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'indent' },
+						'Beta - APARAVI/NovaStor/Production/AG-HyperV12 appliance'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'floatRight moveUp2' },
+						'0 Tasks with errors'
+					),
+					_react2.default.createElement('hr', { className: 'healthHR' }),
+					_react2.default.createElement('i', { className: 'fa fa-server fa-2x', 'aria-hidden': 'true' }),
+					_react2.default.createElement(
+						'h3',
+						null,
+						'ag-backupserver agent'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'completedBG floatRight' },
+						'Completed'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'indent' },
+						'Beta - APARAVI/NovaStor/Production/AG-HyperV12 appliance'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'floatRight moveUp2' },
+						'10 Tasks with errors'
+					),
+					_react2.default.createElement('hr', { className: 'healthHR' }),
+					_react2.default.createElement('i', { className: 'fa fa-server fa-2x', 'aria-hidden': 'true' }),
+					_react2.default.createElement(
+						'h3',
+						null,
+						'ag-ws-kurt agent'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'completedBG floatRight' },
+						'Completed'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'indent' },
+						'Beta - APARAVI/NovaStor/Production/AG-HyperV12 appliance'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'floatRight moveUp2' },
+						'0 Tasks with errors'
+					),
+					_react2.default.createElement('hr', { className: 'healthHR' }),
+					_react2.default.createElement('i', { className: 'fa fa-server fa-2x', 'aria-hidden': 'true' }),
+					_react2.default.createElement(
+						'h3',
+						null,
+						'nate-tablet agent'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'completedBG floatRight' },
+						'Completed'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'indent' },
+						'Beta - APARAVI/Nate/Nate-server appliance'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'floatRight moveUp2' },
+						'0 Tasks with errors'
+					),
+					_react2.default.createElement('hr', { className: 'healthHR' }),
+					_react2.default.createElement('i', { className: 'fa fa-server fa-2x', 'aria-hidden': 'true' }),
+					_react2.default.createElement(
+						'h3',
+						null,
+						'Jack\'s Machine (Q4J)'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'completedBG floatRight' },
+						'Completed'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'indent' },
+						'Beta - APARAVI/NovaStor/Production/AG-HyperV12 appliance'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'floatRight moveUp2' },
+						'0 Tasks with errors'
+					),
+					_react2.default.createElement('hr', { className: 'healthHR' }),
+					_react2.default.createElement('i', { className: 'fa fa-server fa-2x', 'aria-hidden': 'true' }),
+					_react2.default.createElement(
+						'h3',
+						null,
+						'ag-backupserver agent'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'completedBG floatRight' },
+						'Completed'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'indent' },
+						'Beta - APARAVI/NovaStor/Production/AG-HyperV12 appliance'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'floatRight moveUp2' },
+						'10 Tasks with errors'
+					),
+					_react2.default.createElement('hr', { className: 'healthHR' }),
+					_react2.default.createElement('i', { className: 'fa fa-server fa-2x', 'aria-hidden': 'true' }),
+					_react2.default.createElement(
+						'h3',
+						null,
+						'ag-ws-kurt agent'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'completedBG floatRight' },
+						'Completed'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'indent' },
+						'Beta - APARAVI/NovaStor/Production/AG-HyperV12 appliance'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'floatRight moveUp2' },
+						'0 Tasks with errors'
+					),
+					_react2.default.createElement('hr', { className: 'healthHR' }),
+					_react2.default.createElement('i', { className: 'fa fa-server fa-2x', 'aria-hidden': 'true' }),
+					_react2.default.createElement(
+						'h3',
+						null,
+						'nate-tablet agent'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'completedBG floatRight' },
+						'Completed'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'indent' },
+						'Beta - APARAVI/Nate/Nate-server appliance'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'floatRight moveUp2' },
+						'0 Tasks with errors'
+					)
+				) : null
+			);
+		}
+	}]);
+
+	return LiveFeed;
 }(_react.Component);
 
 exports.default = LiveFeed;
@@ -27713,8 +27754,9 @@ var Dashboard = function (_Component) {
 			return _react2.default.createElement(
 				'div',
 				null,
+				_react2.default.createElement(_modules.Logo, null),
 				_react2.default.createElement(_modules.Navbar, { visible: this.state.navIsOpen ? "navLeft" : "navLeftGone" }),
-				_react2.default.createElement(_modules.NavCircle, { navCircleOpen: this.state.navIsOpen ? "navCircleRight" : "navCircleLeft", onClick: this.handleNavOpen.bind(this) }),
+				_react2.default.createElement(_modules.NavCircle, { navCircleOpen: this.state.navIsOpen ? "navCircleOpen" : "navCircleClosed", onClick: this.handleNavOpen.bind(this) }),
 				_react2.default.createElement(
 					'div',
 					{ className: this.state.navIsOpen ? "bodyContent" : "bodyContent2" },
@@ -28154,7 +28196,7 @@ exports = module.exports = __webpack_require__(253)(undefined);
 
 
 // module
-exports.push([module.i, "/*Reset all margins*/\n* {\n  margin: 0;\n  padding: 0; }\n\n/*Background Image*/\nhtml {\n  background: url(" + __webpack_require__(254) + ") no-repeat center center fixed;\n  -webkit-background-size: cover;\n  -moz-background-size: cover;\n  -o-background-size: cover;\n  background-size: cover; }\n\n/*Navbar*/\n.navLeft {\n  position: fixed;\n  width: 25%;\n  height: 100%;\n  background: -webkit-linear-gradient(#16003d, #8343f6);\n  background: -o-linear-gradient(#16003d, #8343f6);\n  background: -moz-linear-gradient(#16003d, #8343f6);\n  background: linear-gradient(#16003d, #8343f6);\n  color: white;\n  -webkit-clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);\n  clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);\n  transition: transform .75s;\n  margin-left: -17.5vw;\n  transform: translate(17.5vw, 0); }\n\n.navLeftGone {\n  position: fixed;\n  width: 25%;\n  height: 100%;\n  background: -webkit-linear-gradient(#16003d, #8343f6);\n  background: -o-linear-gradient(#16003d, #8343f6);\n  background: -moz-linear-gradient(#16003d, #8343f6);\n  background: linear-gradient(#16003d, #8343f6);\n  color: white;\n  -webkit-clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);\n  clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);\n  transition: transform 2.25s;\n  margin-left: -17.5vw;\n  transform: translate(-25vw, 0); }\n\n.navLeftGone a, .navLeftGone h1, .navLeftGone img, .navLeftGone i, .navLeftGone div.navLinks, .navLeftGone div.nonLinkNav {\n  /*width: 0;\n\t height: 0;\n\t /*display: none;*/ }\n\n.navLeftGone a, .navLeftGone h1 {\n  font-family: 'Josefin Sans', sans-serif;\n  letter-spacing: 1px;\n  text-decoration: none;\n  color: white;\n  display: block;\n  line-height: 2.75;\n  font-size: 22px;\n  font-weight: normal;\n  display: inline; }\n\n.navLeft a, .navLeft h1 {\n  font-family: 'Josefin Sans', sans-serif;\n  letter-spacing: 1px;\n  text-decoration: none;\n  color: white;\n  display: block;\n  line-height: 2.75;\n  font-size: 22px;\n  font-weight: normal;\n  display: inline; }\n\n.aparaviLogo {\n  padding: 5% 0 0 0;\n  margin: 0 auto 0 auto;\n  width: 80%; }\n\n.navLinks {\n  display: flex;\n  flex-direction: column;\n  margin: 10% 0 0 0; }\n\n.navLeft i {\n  padding: 0 5% 0 8%; }\n\n.navLeftGone i {\n  padding: 0 5% 0 8%; }\n\n.caretIcon1 {\n  padding: 0 5% 0 4% !important; }\n\n.fa-lg {\n  vertical-align: 0; }\n\n.fa-sign-out {\n  font-size: 1.1em; }\n\n.navLinks a:hover, .navLinks h1:hover {\n  text-decoration: underline; }\n\n.activeNavLink {\n  background-color: rgba(255, 255, 255, 0.2);\n  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2); }\n\n.miniNavLinks {\n  display: flex;\n  flex-direction: column; }\n\n.miniNavLinks a {\n  line-height: 1.25px; }\n\n.miniNavLinks h1 {\n  font-size: 14px; }\n\n.miniNavLinks i {\n  padding-left: 16%; }\n\n.smallerIcon {\n  font-size: .7em; }\n\n.widthFix {\n  padding-left: 16.5% !important;\n  padding-right: 6% !important; }\n\n.widthFix2 {\n  padding-left: 16.5% !important;\n  padding-right: 5.75% !important; }\n\n/*Nav Cirle*/\n.navCircleRight {\n  position: fixed;\n  width: 100px;\n  height: 100px;\n  border-radius: 50px;\n  font-size: 14px;\n  line-height: 100px;\n  text-align: center;\n  z-index: 2;\n  background: -webkit-linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);\n  border: .5px solid white;\n  margin: 80vh 0 0 3.5vw;\n  box-shadow: 5px 5px 10px rgba(95, 89, 123, 0.15);\n  transform: rotateY(0deg);\n  transition: transform .25s; }\n\n.navCircleRight:hover {\n  cursor: pointer; }\n\n.navCircleLeft {\n  position: fixed;\n  width: 100px;\n  height: 100px;\n  border-radius: 50px;\n  font-size: 14px;\n  line-height: 100px;\n  text-align: center;\n  border: .5px solid white;\n  z-index: 2;\n  background: -webkit-linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);\n  margin: 80vh 0 0 3.5vw;\n  box-shadow: 5px 5px 10px rgba(95, 89, 123, 0.2);\n  transform: rotateY(180deg);\n  transition: transform .25s; }\n\n.navCircleLeft:hover {\n  cursor: pointer; }\n\n.navCircleRight div.bar1 {\n  position: absolute;\n  height: 50px;\n  width: 7.5px;\n  background-color: white;\n  top: 25%;\n  left: 47%;\n  transform: rotate(45deg);\n  border-radius: 5%; }\n\n.navCircleRight div.bar2 {\n  position: absolute;\n  height: 50px;\n  width: 7.5px;\n  background-color: white;\n  top: 25%;\n  left: 47%;\n  transform: rotate(-45deg);\n  border-radius: 5%; }\n\n.navCircleLeft div.bar1 {\n  position: absolute;\n  height: 50px;\n  width: 7.5px;\n  border-radius: 10%;\n  background-color: white;\n  top: 9%;\n  left: 44.5%;\n  transform: rotate(90deg); }\n\n.navCircleLeft div.bar2 {\n  position: absolute;\n  height: 50px;\n  width: 7.5px;\n  border-radius: 10%;\n  background-color: white;\n  top: 25%;\n  left: 44.5%;\n  transform: rotate(90deg); }\n\n.navCircleLeft div.bar3 {\n  position: absolute;\n  height: 50px;\n  width: 7.5px;\n  border-radius: 10%;\n  background-color: white;\n  top: 41%;\n  left: 44.5%;\n  transform: rotate(90deg); }\n\n/*Content*/\n.bodyContent {\n  margin: 0 auto 0 auto;\n  width: 75%;\n  padding-top: 3%;\n  transition: transform .5s;\n  transform: translate(17.5%, 0); }\n\n.bodyContent2 {\n  margin: 0 auto 0 auto;\n  width: 75%;\n  padding-top: 3%;\n  transition: transform 1.25s; }\n\n/*Dashboard*/\n.widget {\n  font-family: 'Roboto', sans-serif;\n  color: rgba(22, 0, 50, 0.6);\n  background-color: white;\n  display: inline-block;\n  padding: 2% 2% 2% 2%;\n  margin: 0 1.5% 3% 1.5%;\n  width: 17.5%;\n  border: 1px solid rgba(95, 89, 123, 0.15);\n  box-shadow: 5px 5px 10px rgba(95, 89, 123, 0.15);\n  text-align: right;\n  border-radius: 5px; }\n\n.widget h3 {\n  display: inline-block;\n  line-height: 1.75;\n  letter-spacing: 1px;\n  font-size: 22px;\n  padding-bottom: 10%; }\n\n.widget i {\n  float: left;\n  padding: 0 20% 0 0; }\n\n.widget p {\n  font-size: 16px; }\n\ndiv.widget i.fa-database:before {\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  color: transparent;\n  -webkit-background-clip: text;\n  background-clip: text;\n  font-size: .85em; }\n\ndiv.widget i.fa-file:before {\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  color: transparent;\n  -webkit-background-clip: text;\n  background-clip: text;\n  font-size: .85em; }\n\ndiv.widget i.fa-ambulance:before {\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  color: transparent;\n  -webkit-background-clip: text;\n  background-clip: text;\n  font-size: .85em; }\n\ndiv.widget i.fa-archive:before {\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  color: transparent;\n  -webkit-background-clip: text;\n  background-clip: text;\n  font-size: .85em; }\n\ndiv.widget i.fa-server:before {\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  color: transparent;\n  -webkit-background-clip: text;\n  background-clip: text;\n  font-size: .85em; }\n\ndiv.widget i.fa-desktop:before {\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  color: transparent;\n  -webkit-background-clip: text;\n  background-clip: text;\n  font-size: .85em; }\n\ndiv.widget i.fa-camera:before {\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  color: transparent;\n  -webkit-background-clip: text;\n  background-clip: text;\n  font-size: .85em; }\n\ndiv.widget i.fa-check:before {\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  color: transparent;\n  -webkit-background-clip: text;\n  background-clip: text;\n  font-size: .85em; }\n\n/*Dashboard Summary*/\ndiv.widgetWide {\n  font-family: 'Roboto', sans-serif;\n  color: rgba(22, 0, 50, 0.6);\n  width: 95.5%;\n  margin: 0 1.5% 3% 1.5%;\n  background-color: white;\n  display: inline-block;\n  border: 1px solid rgba(95, 89, 123, 0.15);\n  box-shadow: 5px 5px 10px rgba(95, 89, 123, 0.15);\n  border-radius: 5px; }\n\ndiv.summaryHeader {\n  padding: 2% 2% 0% 2%; }\n\ndiv.widgetWide h2 {\n  display: inline-block;\n  text-align: left;\n  margin: 0 2.5% 1.5% 0; }\n\ndiv.widgetWide i {\n  float: right;\n  margin-left: 2.5%; }\n\n.summaryInfoBox {\n  width: 147px;\n  text-align: center;\n  margin: 20px 0 0 0;\n  display: inline-block; }\n\n.summaryInfoTitle {\n  margin-bottom: 20px; }\n\n.circleChartOuter {\n  position: relative;\n  width: 100px;\n  height: 100px;\n  border-radius: 50px;\n  font-size: 14px;\n  line-height: 100px;\n  text-align: center;\n  background: -webkit-linear-gradient(#2492b7, #2EFFDA);\n  background: -o-linear-gradient(#2492b7, #2EFFDA);\n  background: -moz-linear-gradient(#2492b7, #2EFFDA);\n  background: linear-gradient(#2492b7, #2EFFDA);\n  margin: 22.5px 22.5px;\n  -webkit-animation: spin 3s linear infinite;\n  -moz-animation: spin 3s linear infinite;\n  animation: spin 3s linear infinite; }\n\n.circleChartOuter2 {\n  position: relative;\n  width: 100px;\n  height: 100px;\n  border-radius: 50px;\n  font-size: 14px;\n  line-height: 100px;\n  text-align: center;\n  background: gray;\n  background: gray;\n  background: gray;\n  background: gray;\n  margin: 22.5px 22.5px;\n  -webkit-animation: spin 3s linear infinite;\n  -moz-animation: spin 3s linear infinite;\n  animation: spin 3s linear infinite; }\n\n@-moz-keyframes spin {\n  100% {\n    -moz-transform: rotate(360deg); } }\n\n@-webkit-keyframes spin {\n  100% {\n    -webkit-transform: rotate(360deg); } }\n\n@keyframes spin {\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n.circleChartInner {\n  position: absolute;\n  top: 6.25px;\n  left: 6.25px;\n  width: 87.5px;\n  height: 87.5px;\n  border-radius: 43.75px;\n  line-height: 87.5px;\n  background: white;\n  margin: auto auto;\n  -webkit-animation: spin2 3s linear infinite;\n  -moz-animation: spin2 3s linear infinite;\n  animation: spin2 3s linear infinite; }\n\n@-moz-keyframes spin2 {\n  100% {\n    -moz-transform: rotate(-360deg); } }\n\n@-webkit-keyframes spin2 {\n  100% {\n    -webkit-transform: rotate(-360deg); } }\n\n@keyframes spin2 {\n  100% {\n    -webkit-transform: rotate(-360deg);\n    transform: rotate(-360deg); } }\n\n.verticalLine {\n  position: absolute;\n  width: 2px;\n  margin: 20px 0 0 0;\n  height: 144px;\n  display: inline-block;\n  background-color: rgba(22, 0, 50, 0.1); }\n\nhr {\n  border: 1px solid rgba(22, 0, 50, 0.1); }\n\n/*Dashboard Health*/\n.widgetHalf {\n  font-family: 'Roboto', sans-serif;\n  color: rgba(22, 0, 50, 0.6);\n  width: 42.25%;\n  margin: 0 1.5% 3% 1.5%;\n  background-color: white;\n  display: inline-block;\n  border: 1px solid rgba(95, 89, 123, 0.15);\n  box-shadow: 5px 5px 10px rgba(95, 89, 123, 0.15);\n  padding: 0% 2% 2% 2%;\n  border-radius: 5px;\n  height: 380px;\n  overflow-y: scroll; }\n\n.fixedHeader {\n  position: absolute;\n  padding-top: 20.5px;\n  z-index: 1;\n  width: 31.75%;\n  background-color: white; }\n\n.healthContent {\n  margin-top: 90px; }\n\ndiv.widgetHalf h2 {\n  display: inline-block;\n  text-align: left; }\n\ndiv.widgetHalf i {\n  float: right;\n  margin-left: 2.5%; }\n\n.healthWidget h3 {\n  font-family: 'Merriweather Sans', sans-serif;\n  display: inline-block; }\n\n.healthWidget i.fa-desktop:before {\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  color: transparent;\n  -webkit-background-clip: text;\n  background-clip: text; }\n\n.healthWidget i.fa-desktop {\n  float: left;\n  padding: 5px 12.5px 0 0;\n  margin-left: 0; }\n\n.healthWidget p {\n  font-size: 12px;\n  display: inline-block;\n  max-width: 240px;\n  white-space: nowrap;\n  overflow-x: scroll; }\n\np.offlineBG {\n  text-align: center;\n  font-family: 'Merriweather Sans', sans-serif;\n  font-size: 12px;\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  display: inline-block;\n  width: 150px;\n  padding: 1% 2%;\n  color: white;\n  border-radius: 25px; }\n\n.floatRight {\n  float: right; }\n\n.moveUp {\n  position: relative;\n  margin-top: -3.5%;\n  margin-right: 31px; }\n\n.healthHR {\n  margin: 20px 0 20px 0; }\n\n.healthHR2 {\n  margin-bottom: 0; }\n\n/*Dashboard Live Feed */\n.healthWidget i.fa-server:before {\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  color: transparent;\n  -webkit-background-clip: text;\n  background-clip: text; }\n\n.healthWidget i.fa-server {\n  float: left;\n  padding: 5px 12.5px 0 0;\n  margin-left: 0; }\n\np.completedBG {\n  font-family: 'Merriweather Sans', sans-serif;\n  font-size: 16px;\n  text-align: center;\n  background: -webkit-linear-gradient(135deg, #2492b7, #2492b7 30%, #2EFFDA);\n  background: -o-linear-gradient(135deg, #2492b7, #2492b7 30%, #2EFFDA);\n  background: -moz-linear-gradient(135deg, #2492b7, #2492b7 30%, #2EFFDA);\n  background: linear-gradient(135deg, #2492b7, #2492b7 30%, #2EFFDA);\n  display: inline-block;\n  color: white;\n  width: 115px;\n  padding: 0.5% 2%;\n  border-radius: 25px; }\n\n.moveUp2 {\n  position: relative;\n  margin-top: -3.5%;\n  margin-right: 18px; }\n\n.liveFeedContent {\n  margin-top: 90px; }\n", ""]);
+exports.push([module.i, "/*Reset all margins*/\n* {\n  margin: 0;\n  padding: 0;\n  overflow-x: hidden; }\n\n/*Background Image*/\nhtml {\n  background: url(" + __webpack_require__(254) + ") no-repeat center center fixed;\n  -webkit-background-size: cover;\n  -moz-background-size: cover;\n  -o-background-size: cover;\n  background-size: cover; }\n\n.mobileLogo {\n  display: none; }\n\n/*Navbar*/\n.navLeft {\n  position: fixed;\n  width: 25%;\n  height: 100%;\n  background: -webkit-linear-gradient(#16003d, #8343f6);\n  background: -o-linear-gradient(#16003d, #8343f6);\n  background: -moz-linear-gradient(#16003d, #8343f6);\n  background: linear-gradient(#16003d, #8343f6);\n  color: white;\n  -webkit-clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);\n  clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);\n  transition: transform .75s;\n  margin-left: -17.5vw;\n  transform: translate(17.5vw, 0); }\n\n.navLeftGone {\n  position: fixed;\n  width: 25%;\n  height: 100%;\n  background: -webkit-linear-gradient(#16003d, #8343f6);\n  background: -o-linear-gradient(#16003d, #8343f6);\n  background: -moz-linear-gradient(#16003d, #8343f6);\n  background: linear-gradient(#16003d, #8343f6);\n  color: white;\n  -webkit-clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);\n  clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);\n  transition: transform 2.25s;\n  margin-left: -17.5vw;\n  transform: translate(-25vw, 0); }\n\n.navLeftGone a, .navLeftGone h1, .navLeftGone img, .navLeftGone i, .navLeftGone div.navLinks, .navLeftGone div.nonLinkNav {\n  /*width: 0;\n\t height: 0;\n\t /*display: none;*/ }\n\n.navLeftGone a, .navLeftGone h1 {\n  font-family: 'Josefin Sans', sans-serif;\n  font-weight: 100;\n  letter-spacing: 1.75px;\n  text-decoration: none;\n  color: white;\n  display: block;\n  line-height: 2.75;\n  font-size: 22px;\n  /*font-weight: normal;*/\n  display: inline; }\n\n.navLeft a, .navLeft h1 {\n  font-family: 'Josefin Sans', sans-serif;\n  font-weight: 100;\n  letter-spacing: 2px;\n  text-decoration: none;\n  color: white;\n  display: block;\n  line-height: 2.75;\n  font-size: 22px;\n  /*font-weight: normal;*/\n  display: inline; }\n\ni {\n  overflow-y: visible;\n  overflow-x: visible; }\n\n.aparaviLogo {\n  padding: 5% 0 0 0;\n  margin: 0 auto 0 auto;\n  width: 80%; }\n\n.navLinks {\n  display: flex;\n  flex-direction: column;\n  margin: 10% 0 0 0; }\n\n.navLeft i {\n  padding: 0 5% 0 8%; }\n\n.navLeftGone i {\n  padding: 0 5% 0 8%; }\n\n.caretIcon1 {\n  padding: 0 5% 0 4% !important; }\n\n.fa-lg {\n  vertical-align: 0; }\n\n.fa-sign-out {\n  font-size: 1.1em; }\n\n.navLinks a:hover, .navLinks h1:hover {\n  text-decoration: underline; }\n\n.activeNavLink {\n  background-color: rgba(255, 255, 255, 0.1);\n  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2); }\n\n.miniNavLinks {\n  display: flex;\n  flex-direction: column; }\n\n.miniNavLinks a {\n  line-height: 1.25px; }\n\n.miniNavLinks h1 {\n  font-size: 14px; }\n\n.miniNavLinks i {\n  padding-left: 16%; }\n\n.smallerIcon {\n  font-size: .7em; }\n\n.widthFix {\n  padding-left: 16.5% !important;\n  padding-right: 6% !important; }\n\n.widthFix2 {\n  padding-left: 16.5% !important;\n  padding-right: 5.75% !important; }\n\n/*Nav Cirle*/\n.navCircleOpen {\n  position: fixed;\n  width: 100px;\n  height: 100px;\n  border-radius: 50px;\n  font-size: 14px;\n  line-height: 100px;\n  text-align: center;\n  z-index: 2;\n  background: white;\n  /*background: -webkit-linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);\n\tbackground: -o-linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);\n\tbackground: -moz-linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);\n\tbackground: linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);*/\n  border: 3px solid #FF9012;\n  margin: 80vh 0 0 3.5vw;\n  box-shadow: 5px 5px 10px rgba(95, 89, 123, 0.15);\n  transform: rotateY(0deg);\n  transition: transform .25s; }\n\n.navCircleOpen:hover {\n  cursor: pointer; }\n\n.navCircleClosed {\n  position: fixed;\n  width: 100px;\n  height: 100px;\n  border-radius: 50px;\n  font-size: 14px;\n  line-height: 100px;\n  text-align: center;\n  border: 3px solid #FF9012;\n  z-index: 2;\n  background: white;\n  /*background: -webkit-linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);\n\tbackground: -o-linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);\n\tbackground: -moz-linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);\n\tbackground: linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);*/\n  margin: 80vh 0 0 3.5vw;\n  box-shadow: 5px 5px 10px rgba(95, 89, 123, 0.2);\n  transform: rotateY(180deg);\n  transition: transform .25s; }\n\n.navCircleClosed:hover {\n  cursor: pointer; }\n\n.navCircleOpen div.bar1 {\n  position: absolute;\n  height: 50px;\n  width: 7.5px;\n  background: #160046;\n  top: 25%;\n  left: 47%;\n  transform: rotate(45deg);\n  border-radius: 5%; }\n\n.navCircleOpen div.bar2 {\n  position: absolute;\n  height: 50px;\n  width: 7.5px;\n  background: #160046;\n  top: 25%;\n  left: 47%;\n  transform: rotate(-45deg);\n  border-radius: 5%; }\n\n.navCircleClosed div.bar1 {\n  position: absolute;\n  height: 50px;\n  width: 7.5px;\n  border-radius: 10%;\n  background: #160046;\n  top: 9%;\n  left: 44.5%;\n  transform: rotate(90deg); }\n\n.navCircleClosed div.bar2 {\n  position: absolute;\n  height: 50px;\n  width: 7.5px;\n  border-radius: 10%;\n  background: #160046;\n  top: 25%;\n  left: 44.5%;\n  transform: rotate(90deg); }\n\n.navCircleClosed div.bar3 {\n  position: absolute;\n  height: 50px;\n  width: 7.5px;\n  border-radius: 10%;\n  background: #160046;\n  top: 41%;\n  left: 44.5%;\n  transform: rotate(90deg); }\n\n/*Content*/\n.bodyContent {\n  margin: 0 auto 0 auto;\n  width: 75%;\n  padding-top: 3%;\n  transition: transform .5s;\n  transform: translate(16.75%, 0); }\n\n.bodyContent2 {\n  margin: 0 auto 0 auto;\n  width: 75%;\n  padding-top: 3%;\n  transition: transform 1.25s; }\n\n/*Dashboard*/\n.widget {\n  font-family: 'Roboto', sans-serif;\n  font-weight: 300;\n  color: rgba(22, 0, 50, 0.6);\n  background-color: white;\n  display: inline-block;\n  padding: 2% 2% 2% 2%;\n  margin: 0 1.5% 3% 1.5%;\n  width: 17.75%;\n  border: 1px solid rgba(95, 89, 123, 0.15);\n  box-shadow: 5px 5px 10px rgba(95, 89, 123, 0.15);\n  text-align: right;\n  border-radius: 5px; }\n\n.widget h3 {\n  display: inline-block;\n  font-weight: 300;\n  line-height: 1.75;\n  letter-spacing: 1px;\n  font-size: 22px;\n  padding-bottom: 10%; }\n\n.widget i {\n  float: left; }\n\n.widget p {\n  font-size: 16px; }\n\ndiv.widget i.fa-database:before {\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  color: transparent;\n  -webkit-background-clip: text;\n  background-clip: text;\n  font-size: .85em; }\n\ndiv.widget i.fa-file:before {\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  color: transparent;\n  -webkit-background-clip: text;\n  background-clip: text;\n  font-size: .85em; }\n\ndiv.widget i.fa-ambulance:before {\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  color: transparent;\n  -webkit-background-clip: text;\n  background-clip: text;\n  font-size: .85em; }\n\ndiv.widget i.fa-archive:before {\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  color: transparent;\n  -webkit-background-clip: text;\n  background-clip: text;\n  font-size: .85em; }\n\ndiv.widget i.fa-server:before {\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  color: transparent;\n  -webkit-background-clip: text;\n  background-clip: text;\n  font-size: .85em; }\n\ndiv.widget i.fa-desktop:before {\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  color: transparent;\n  -webkit-background-clip: text;\n  background-clip: text;\n  font-size: .85em; }\n\ndiv.widget i.fa-camera:before {\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  color: transparent;\n  -webkit-background-clip: text;\n  background-clip: text;\n  font-size: .85em; }\n\ndiv.widget i.fa-check:before {\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  color: transparent;\n  -webkit-background-clip: text;\n  background-clip: text;\n  font-size: .85em; }\n\n/*Dashboard Summary*/\ndiv.widgetWide {\n  font-family: 'Roboto', sans-serif;\n  font-weight: 300;\n  color: rgba(22, 0, 50, 0.6);\n  width: 96.5%;\n  margin: 0 1.5% 3% 1.5%;\n  background-color: white;\n  display: inline-block;\n  border: 1px solid rgba(95, 89, 123, 0.15);\n  box-shadow: 5px 5px 10px rgba(95, 89, 123, 0.15);\n  border-radius: 5px; }\n\ndiv.summaryHeader {\n  padding: 2% 2% 0% 2%; }\n\ndiv.summaryHeader h2 {\n  padding-left: 5px; }\n\ndiv.widgetWide h2 {\n  color: rgba(22, 0, 50, 0.8);\n  letter-spacing: 1.5px;\n  display: inline-block;\n  text-align: left;\n  margin: 0 2.5% 2% 0; }\n\ndiv.widgetWide i {\n  color: rgba(22, 0, 50, 0.8);\n  float: right;\n  margin-left: 2.5%; }\n\ndiv.summaryInfo {\n  overflow-x: scroll;\n  white-space: nowrap; }\n\n.summaryInfoBox {\n  width: 147px;\n  text-align: center;\n  margin: 20px 0 0 0;\n  display: inline-block;\n  overflow-x: hidden;\n  overflow-y: hidden; }\n\n.summaryInfoTitle {\n  margin-bottom: 20px; }\n\n.circleChartOuter {\n  position: relative;\n  width: 100px;\n  height: 100px;\n  border-radius: 50%;\n  font-size: 14px;\n  line-height: 100px;\n  text-align: center;\n  background: -webkit-linear-gradient(#2492b7, #2EFFDA);\n  background: -o-linear-gradient(#2492b7, #2EFFDA);\n  background: -moz-linear-gradient(#2492b7, #2EFFDA);\n  background: linear-gradient(#2492b7, #2EFFDA);\n  margin: 22.5px 22.5px;\n  overflow-y: hidden;\n  -webkit-animation: spin 3s linear infinite;\n  -moz-animation: spin 3s linear infinite;\n  animation: spin 3s linear infinite; }\n\n.circleChartOuter2 {\n  position: relative;\n  width: 100px;\n  height: 100px;\n  border-radius: 50%;\n  font-size: 14px;\n  line-height: 100px;\n  text-align: center;\n  background: gray;\n  background: gray;\n  background: gray;\n  background: gray;\n  overflow-y: hidden;\n  margin: 22.5px 22.5px;\n  -webkit-animation: spin 3s linear infinite;\n  -moz-animation: spin 3s linear infinite;\n  animation: spin 3s linear infinite; }\n\n@-moz-keyframes spin {\n  100% {\n    -moz-transform: rotate(360deg); } }\n\n@-webkit-keyframes spin {\n  100% {\n    -webkit-transform: rotate(360deg); } }\n\n@keyframes spin {\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n.circleChartInner {\n  position: absolute;\n  top: 6%;\n  left: 6%;\n  width: 87.5px;\n  height: 87.5px;\n  border-radius: 50%;\n  line-height: 87.5px;\n  background: white;\n  margin: auto auto;\n  -webkit-animation: spin2 3s linear infinite;\n  -moz-animation: spin2 3s linear infinite;\n  animation: spin2 3s linear infinite; }\n\n@-moz-keyframes spin2 {\n  100% {\n    -moz-transform: rotate(-360deg); } }\n\n@-webkit-keyframes spin2 {\n  100% {\n    -webkit-transform: rotate(-360deg); } }\n\n@keyframes spin2 {\n  100% {\n    -webkit-transform: rotate(-360deg);\n    transform: rotate(-360deg); } }\n\n.verticalLine {\n  position: absolute;\n  width: 2px;\n  margin: 20px 0 0 0;\n  height: 144px;\n  display: inline-block;\n  background-color: rgba(22, 0, 50, 0); }\n\nhr {\n  border: 1px solid rgba(22, 0, 50, 0.1); }\n\n/*Dashboard Health*/\n.widgetHalf {\n  font-family: 'Roboto', sans-serif;\n  font-weight: 300;\n  color: rgba(22, 0, 50, 0.6);\n  width: 42.6%;\n  margin: 0 1.5% 3% 1.5%;\n  background-color: white;\n  display: inline-block;\n  border: 1px solid rgba(95, 89, 123, 0.15);\n  box-shadow: 5px 5px 10px rgba(95, 89, 123, 0.15);\n  padding: 0% 2% 2% 2%;\n  border-radius: 5px;\n  height: 380px;\n  overflow-y: scroll; }\n\n.healthWidgetClosed {\n  font-family: 'Roboto', sans-serif;\n  font-weight: 300;\n  color: rgba(22, 0, 50, 0.6);\n  width: 42.6%;\n  margin: 0 1.5% 3% 1.5%;\n  background-color: white;\n  display: inline-block;\n  border: 1px solid rgba(95, 89, 123, 0.15);\n  box-shadow: 5px 5px 10px rgba(95, 89, 123, 0.15);\n  padding: 0% 2% 0% 2%;\n  /*border-radius: 5px;*/\n  height: 70.5px;\n  margin-bottom: 363px; }\n\n.fixedHeader {\n  position: absolute;\n  padding-top: 20.5px;\n  margin-left: -2px;\n  z-index: 1;\n  width: 32.25vw;\n  background-color: white; }\n\n.fixedHeader h2 {\n  padding-left: 5px; }\n\n.healthContent {\n  margin-top: 90px; }\n\ndiv.widgetHalf h2 {\n  font-weight: bold;\n  color: rgba(22, 0, 50, 0.8);\n  letter-spacing: 1.5px;\n  display: inline-block;\n  text-align: left; }\n\ndiv.widgetHalf i {\n  color: rgba(22, 0, 70, 0.8);\n  float: right;\n  margin-left: 2.5%; }\n\n.healthWidget h3 {\n  font-family: 'Merriweather Sans', sans-serif;\n  display: inline-block; }\n\n.healthWidget i.fa-desktop:before {\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  color: transparent;\n  -webkit-background-clip: text;\n  background-clip: text; }\n\n.healthWidget i.fa-desktop {\n  float: left;\n  padding: 5px 12.5px 0 0;\n  margin-left: 0; }\n\n.healthWidget p {\n  font-size: 12px;\n  display: inline-block;\n  max-width: 240px;\n  white-space: nowrap;\n  overflow-x: scroll; }\n\np.offlineBG {\n  text-align: center;\n  font-family: 'Merriweather Sans', sans-serif;\n  font-size: 12px;\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  display: inline-block;\n  width: 150px;\n  padding: 1% 2%;\n  color: white;\n  border-radius: 25px; }\n\n.floatRight {\n  float: right; }\n\n.moveUp {\n  position: relative;\n  margin-right: 31px; }\n\n.healthHR {\n  margin: 20px 0 20px 0; }\n\n.healthHR2 {\n  margin-bottom: 0; }\n\n/*Dashboard Live Feed */\n.healthWidget i.fa-server:before {\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  color: transparent;\n  -webkit-background-clip: text;\n  background-clip: text; }\n\n.healthWidget i.fa-server {\n  float: left;\n  padding: 5px 12.5px 0 0;\n  margin-left: 0; }\n\np.completedBG {\n  font-family: 'Merriweather Sans', sans-serif;\n  font-size: 16px;\n  text-align: center;\n  background: -webkit-linear-gradient(135deg, #2492b7, #2492b7 30%, #2EFFDA);\n  background: -o-linear-gradient(135deg, #2492b7, #2492b7 30%, #2EFFDA);\n  background: -moz-linear-gradient(135deg, #2492b7, #2492b7 30%, #2EFFDA);\n  background: linear-gradient(135deg, #2492b7, #2492b7 30%, #2EFFDA);\n  display: inline-block;\n  color: white;\n  width: 115px;\n  padding: 0.5% 2%;\n  border-radius: 25px; }\n\n.moveUp2 {\n  position: relative;\n  margin-right: 18px; }\n\n.liveFeedContent {\n  margin-top: 90px; }\n\n@media (max-width: 1320px) {\n  .widgetHalf {\n    width: 92.5%; }\n  .fixedHeader {\n    width: 69.75vw; }\n  .healthWidgetClosed {\n    margin-bottom: 3%; }\n  .healthWidget h3 {\n    padding-top: .75%;\n    font-size: 16px; }\n  .healthWidget p.indent {\n    padding-left: 2%;\n    margin-top: -.25%; }\n  .healthWidget p.moveUp {\n    padding-left: 2%;\n    padding-top: 1.25%; }\n  .healthWidget p.moveUp2 {\n    padding-left: 2%;\n    padding-top: 1.25%; } }\n\n@media (max-width: 1250px) {\n  div.widget i.fa-database:before {\n    font-size: .7em; }\n  div.widget i.fa-file:before {\n    font-size: .7em; }\n  div.widget i.fa-ambulance:before {\n    font-size: .7em; }\n  div.widget i.fa-archive:before {\n    font-size: .7em; }\n  div.widget i.fa-server:before {\n    font-size: .7em; }\n  div.widget i.fa-desktop:before {\n    font-size: .7em; }\n  div.widget i.fa-camera:before {\n    font-size: .7em; }\n  div.widget i.fa-check:before {\n    font-size: .7em; }\n  .widget p {\n    font-size: 14px; }\n  .widget h3 {\n    padding-bottom: 0%; }\n  .widget {\n    width: 26%; }\n  .navLeft h1, .navLeft a {\n    font-size: 20px;\n    letter-spacing: normal; }\n  .navLeftGone h1, .navLeftGone a {\n    font-size: 20px;\n    letter-spacing: normal; }\n  .nonLinkNav h1, .nonLinkNav a, .nonLinkNav i {\n    font-size: 20px;\n    letter-spacing: normal; }\n  .miniNavLinks h1, .miniNavLinks a {\n    font-size: 16px;\n    letter-spacing: normal; }\n  .healthWidget p {\n    max-width: 150px; } }\n\n@media (max-width: 1000px) {\n  .navCircleOpen {\n    position: absolute;\n    width: 150px;\n    height: 150px;\n    border-radius: 50%;\n    font-size: 14px;\n    line-height: 100px;\n    text-align: center;\n    z-index: 5;\n    background: white;\n    border: 3px solid #FF9012;\n    margin: 25px 0 0 75%;\n    box-shadow: 5px 5px 10px rgba(95, 89, 123, 0.15);\n    transform: rotateY(0deg);\n    transition: transform .25s; }\n  .navCircleClosed {\n    position: absolute;\n    width: 150px;\n    height: 150px;\n    border-radius: 50%;\n    font-size: 14px;\n    line-height: 100px;\n    text-align: center;\n    z-index: 5;\n    background: white;\n    border: 3px solid #FF9012;\n    margin: 25px 0 0 75%;\n    box-shadow: 5px 5px 10px rgba(95, 89, 123, 0.2);\n    transform: rotateY(180deg);\n    transition: transform .25s;\n    -webkit-transform: translate3d(0, 0, 0); }\n  .navCircleClosed div.bar1 {\n    position: absolute;\n    height: 110px;\n    width: 15px;\n    background: #160046;\n    top: 13%;\n    left: 44.5%;\n    transform: rotate(45deg);\n    border-radius: 5%; }\n  .navCircleClosed div.bar2 {\n    position: absolute;\n    height: 110px;\n    width: 15px;\n    background: #160046;\n    top: 13%;\n    left: 44.5%;\n    transform: rotate(-45deg);\n    border-radius: 5%; }\n  .navCircleClosed div.bar3 {\n    display: none; }\n  .navCircleOpen div.bar1 {\n    position: absolute;\n    height: 90px;\n    width: 12.5px;\n    border-radius: 5%;\n    background: #160046;\n    top: 1%;\n    left: 46%;\n    transform: rotate(90deg); }\n  .navCircleOpen div.bar2 {\n    position: absolute;\n    height: 90px;\n    width: 12.5px;\n    border-radius: 5%;\n    background: #160046;\n    top: 19%;\n    left: 46%;\n    transform: rotate(90deg); }\n  .navCircleOpen div.bar3 {\n    position: absolute;\n    height: 90px;\n    width: 12.5px;\n    border-radius: 5%;\n    background: #160046;\n    top: 37%;\n    left: 46%;\n    transform: rotate(90deg); }\n  .navLeft {\n    visibility: hidden;\n    position: absolute;\n    width: 100%;\n    height: 150%;\n    z-index: 4;\n    background: -webkit-linear-gradient(#16003d, #8343f6);\n    background: -o-linear-gradient(#16003d, #8343f6);\n    background: -moz-linear-gradient(#16003d, #8343f6);\n    background: linear-gradient(#16003d, #8343f6);\n    color: white;\n    -webkit-clip-path: polygon(0 0, 100% 0, 1000% 100%, 0% 100%);\n    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);\n    transition: transform 0s;\n    margin-left: 0vw;\n    transform: translate(0vw, 0); }\n  .navLeftGone {\n    position: absolute;\n    width: 100%;\n    height: 250vh;\n    z-index: 4;\n    background: -webkit-linear-gradient(#16003d, #8343f6);\n    background: -o-linear-gradient(#16003d, #8343f6);\n    background: -moz-linear-gradient(#16003d, #8343f6);\n    background: linear-gradient(#16003d, #8343f6);\n    color: white;\n    -webkit-clip-path: polygon(0 0, 100% 0, 1000% 100%, 0% 100%);\n    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);\n    transition: transform 0s;\n    margin-left: 0vw;\n    transform: translate(0vw, 0); }\n  .navLeft img, .navLeftGone img {\n    display: none; }\n  .navLinks {\n    margin-top: 250px; }\n  .navLeft h1, .navLeft a {\n    font-size: 60px;\n    letter-spacing: normal; }\n  .navLeftGone h1, .navLeftGone a {\n    font-size: 60px;\n    letter-spacing: normal; }\n  .nonLinkNav h1, .nonLinkNav a, .nonLinkNav i {\n    font-size: 60px;\n    letter-spacing: normal; }\n  .miniNavLinks h1, .miniNavLinks a {\n    font-size: 40px;\n    letter-spacing: normal; }\n  .bodyContent {\n    margin: 0 auto 0 auto;\n    width: 100%;\n    padding-top: 220px;\n    transition: transform .5s;\n    transform: translate(0%, 0); }\n  .bodyContent2 {\n    margin: 0 auto 0 auto;\n    width: 100%;\n    padding-top: 220px;\n    transition: transform 1.25s; }\n  .mobileLogo {\n    display: block;\n    position: absolute;\n    /*padding-top: 1.25vh;*/\n    /*padding-right: 1.25vw;*/\n    width: 100vw;\n    height: 200px;\n    background: #16003d; }\n  .mobileLogo img {\n    height: 185px; }\n  .widget p {\n    font-size: 32px; }\n  .widget h3 {\n    font-size: 48px; }\n  .widget {\n    width: 42.5%;\n    height: 150px; }\n  div.widget i.fa-database:before {\n    font-size: 1.5em; }\n  div.widget i.fa-file:before {\n    font-size: 1.5em; }\n  div.widget i.fa-ambulance:before {\n    font-size: 1.5em; }\n  div.widget i.fa-archive:before {\n    font-size: 1.5em; }\n  div.widget i.fa-server:before {\n    font-size: 1.5em; }\n  div.widget i.fa-desktop:before {\n    font-size: 1.5em; }\n  div.widget i.fa-camera:before {\n    font-size: 1.5em; }\n  div.widget i.fa-check:before {\n    font-size: 1.5em; }\n  .widgetWide h2 {\n    font-size: 48px;\n    padding-right: 30px; }\n  .widgetWide i {\n    font-size: 48px;\n    padding-left: 30px; }\n  p.summaryInfoTitle {\n    font-size: 32px;\n    margin-bottom: 0px; }\n  div.summaryInfoBox {\n    width: 400px;\n    Height: 400px; }\n  p.circleChartInner {\n    font-size: 32px; }\n  .circleChartOuter {\n    position: relative;\n    width: 300px;\n    height: 300px;\n    border-radius: 50%;\n    font-size: 14px;\n    line-height: 300px;\n    text-align: center;\n    background: -webkit-linear-gradient(#2492b7, #2EFFDA);\n    background: -o-linear-gradient(#2492b7, #2EFFDA);\n    background: -moz-linear-gradient(#2492b7, #2EFFDA);\n    background: linear-gradient(#2492b7, #2EFFDA);\n    margin: 25px 50px 50px 50px;\n    overflow-y: hidden;\n    -webkit-animation: spin 3s linear infinite;\n    -moz-animation: spin 3s linear infinite;\n    animation: spin 3s linear infinite; }\n  .circleChartOuter2 {\n    position: relative;\n    width: 300px;\n    height: 300px;\n    border-radius: 50%;\n    font-size: 14px;\n    line-height: 300px;\n    text-align: center;\n    background: gray;\n    background: gray;\n    background: gray;\n    background: gray;\n    overflow-y: hidden;\n    margin: 25px 50px 50px 50px;\n    -webkit-animation: spin 3s linear infinite;\n    -moz-animation: spin 3s linear infinite;\n    animation: spin 3s linear infinite; }\n  @-moz-keyframes spin {\n    100% {\n      -moz-transform: rotate(360deg); } }\n  @-webkit-keyframes spin {\n    100% {\n      -webkit-transform: rotate(360deg); } }\n  @keyframes spin {\n    100% {\n      -webkit-transform: rotate(360deg);\n      transform: rotate(360deg); } }\n  .circleChartInner {\n    position: absolute;\n    width: 262.5px;\n    height: 262.5px;\n    border-radius: 50%;\n    line-height: 262.5px;\n    background: white;\n    /*margin: 18.75px 18.75px 18.75px 18.75px;*/\n    top: 19px;\n    left: 19px;\n    -webkit-animation: spin2 3s linear infinite;\n    -moz-animation: spin2 3s linear infinite;\n    animation: spin2 3s linear infinite; }\n  @-moz-keyframes spin2 {\n    100% {\n      -moz-transform: rotate(-360deg); } }\n  @-webkit-keyframes spin2 {\n    100% {\n      -webkit-transform: rotate(-360deg); } }\n  @keyframes spin2 {\n    100% {\n      -webkit-transform: rotate(-360deg);\n      transform: rotate(-360deg); } }\n  .widgetHalf h2, .widgetHalf i {\n    font-size: 48px; }\n  .healthWidgetClosed {\n    height: 100px; }\n  .fixedHeader {\n    width: 93vw; }\n  .healthContent {\n    margin-top: 120px; }\n  .liveFeedContent {\n    margin-top: 120px; }\n  .healthHR {\n    width: 93vw; }\n  .healthWidget i {\n    margin-bottom: 15px; }\n  .healthWidget h3 {\n    font-size: 24px;\n    width: 60vw;\n    padding: 0; }\n  .healthWidget p.indent {\n    padding: 0;\n    max-width: 60vw; }\n  .healthWidget p.moveUp {\n    padding-top: 0; }\n  .healthWidget p.moveUp2 {\n    padding-top: 0; } }\n", ""]);
 
 // exports
 
@@ -28700,6 +28742,60 @@ module.exports = function (css) {
 	return fixedCss;
 };
 
+
+/***/ }),
+/* 257 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(3);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(8);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var logo = __webpack_require__(228);
+
+var Archives = function (_Component) {
+	_inherits(Archives, _Component);
+
+	function Archives() {
+		_classCallCheck(this, Archives);
+
+		return _possibleConstructorReturn(this, (Archives.__proto__ || Object.getPrototypeOf(Archives)).apply(this, arguments));
+	}
+
+	_createClass(Archives, [{
+		key: 'render',
+		value: function render() {
+			return _react2.default.createElement(
+				'div',
+				{ className: 'mobileLogo' },
+				_react2.default.createElement('img', { src: logo })
+			);
+		}
+	}]);
+
+	return Archives;
+}(_react.Component);
+
+exports.default = Archives;
 
 /***/ })
 /******/ ]);

@@ -2,6 +2,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	overflow-x: hidden;
 }
 
 /*Background Image*/
@@ -12,6 +13,10 @@ html {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+.mobileLogo {
+	display: none;
 }
 
 /*Navbar*/
@@ -30,7 +35,6 @@ html {
 	transition: transform .75s;
 	margin-left: -17.5vw;
 	transform: translate(17.5vw, 0);
-
 }
 
 .navLeftGone {
@@ -47,8 +51,6 @@ html {
 	transition: transform 2.25s;
 	margin-left: -17.5vw;
 	transform: translate(-25vw, 0);
-
-
 }
 
  .navLeftGone a, .navLeftGone h1, .navLeftGone img, .navLeftGone i, .navLeftGone div.navLinks, .navLeftGone div.nonLinkNav {
@@ -58,27 +60,34 @@ html {
  }
 
  .navLeftGone a, .navLeftGone h1 {
- 	font-family: 'Josefin Sans', sans-serif;
- 	letter-spacing: 1px;
+	font-family: 'Josefin Sans', sans-serif;
+ 	font-weight: 100;
+ 	letter-spacing: 1.75px;
  	text-decoration: none;
  	color: white;
  	display: block;
  	line-height: 2.75;
  	font-size: 22px;
- 	font-weight: normal;
+ 	/*font-weight: normal;*/
  	display: inline;
  }
 
 .navLeft a, .navLeft h1 {
 	font-family: 'Josefin Sans', sans-serif;
-	letter-spacing: 1px;
+	font-weight: 100;
+	letter-spacing: 2px;
 	text-decoration: none;
 	color: white;
 	display: block;
 	line-height: 2.75;
 	font-size: 22px;
-	font-weight: normal;
+	/*font-weight: normal;*/
 	display: inline;
+}
+
+i {
+	overflow-y: visible;
+	overflow-x: visible;
 }
 
 .aparaviLogo {
@@ -118,7 +127,7 @@ html {
 }
 
 .activeNavLink {
-	background-color: rgba(255, 255, 255, .2);
+	background-color: rgba(255, 255, 255, .1);
 	box-shadow: 0px 5px 5px rgba(0, 0, 0, .2);
 }
 
@@ -155,7 +164,7 @@ html {
 
 /*Nav Cirle*/
 
-.navCircleRight {
+.navCircleOpen {
 	position: fixed;
 	width:100px;
     height:100px;
@@ -164,22 +173,23 @@ html {
     line-height:100px;
     text-align:center;
 	z-index: 2;
-	background: -webkit-linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);
+	background: white;
+	/*background: -webkit-linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);
 	background: -o-linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);
 	background: -moz-linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);
-	background: linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);
-	border: .5px solid white;
+	background: linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);*/
+	border: 3px solid #FF9012;
 	margin: 80vh 0 0 3.5vw;
 	box-shadow: 5px 5px 10px rgba(95, 89, 123, 0.15);
 	transform: rotateY(0deg);
 	transition: transform .25s;
 }
 
-.navCircleRight:hover {
+.navCircleOpen:hover {
 	cursor: pointer;
 }
 
-.navCircleLeft {
+.navCircleClosed {
 	position: fixed;
 	width:100px;
     height:100px;
@@ -187,12 +197,13 @@ html {
     font-size:14px;
     line-height:100px;
     text-align:center;
-	border: .5px solid white;
+	border: 3px solid #FF9012;
 	z-index: 2;
-	background: -webkit-linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);
+	background: white;
+	/*background: -webkit-linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);
 	background: -o-linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);
 	background: -moz-linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);
-	background: linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);
+	background: linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);*/
 	margin: 80vh 0 0 3.5vw;
 	box-shadow: 5px 5px 10px rgba(95, 89, 123, 0.2);
 	transform: rotateY(180deg);
@@ -201,60 +212,60 @@ html {
 
 
 
-.navCircleLeft:hover {
+.navCircleClosed:hover {
 	cursor: pointer;
 }
 
-.navCircleRight div.bar1 {
+.navCircleOpen div.bar1 {
 	position: absolute;
 	height: 50px;
 	width: 7.5px;
-	background-color: white;
+	background: rgb(22, 0, 70);
 	top: 25%;
 	left: 47%;
 	transform: rotate(45deg);
 	border-radius: 5%;
 }
 
-.navCircleRight div.bar2 {
+.navCircleOpen div.bar2 {
 	position: absolute;
 	height: 50px;
 	width: 7.5px;
-	background-color: white;
+	background: rgb(22, 0, 70);
 	top: 25%;
 	left: 47%;
 	transform: rotate(-45deg);
 	border-radius: 5%;
 }
 
-.navCircleLeft div.bar1 {
+.navCircleClosed div.bar1 {
 	position: absolute;
 	height: 50px;
 	width: 7.5px;
 	border-radius: 10%;
-	background-color: white;
+	background: rgb(22, 0, 70);
 	top: 9%;
 	left: 44.5%;
 	transform: rotate(90deg);
 }
 
-.navCircleLeft div.bar2 {
+.navCircleClosed div.bar2 {
 	position: absolute;
 	height: 50px;
 	width: 7.5px;
 	border-radius: 10%;
-	background-color: white;
+	background: rgb(22, 0, 70);
 	top: 25%;
 	left: 44.5%;
 	transform: rotate(90deg);
 }
 
-.navCircleLeft div.bar3 {
+.navCircleClosed div.bar3 {
 	position: absolute;
 	height: 50px;
 	width: 7.5px;
 	border-radius: 10%;
-	background-color: white;
+	background: rgb(22, 0, 70);
 	top: 41%;
 	left: 44.5%;
 	transform: rotate(90deg);
@@ -268,7 +279,7 @@ html {
 	width: 75%;
 	padding-top: 3%;
 	transition: transform .5s;
-	transform: translate(17.5%, 0);
+	transform: translate(16.75%, 0);
 }
 
 .bodyContent2 {
@@ -282,12 +293,13 @@ html {
 
 .widget {
 	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
 	color: rgba(22, 0, 50, .6);
 	background-color: white;
 	display: inline-block;
 	padding: 2% 2% 2% 2%;
 	margin: 0 1.5% 3% 1.5%;
-	width: 17.5%;
+	width: 17.75%;
 	border: 1px solid rgba(95, 89, 123, 0.15);
 	box-shadow: 5px 5px 10px rgba(95, 89, 123, 0.15);
 	text-align: right;
@@ -296,6 +308,7 @@ html {
 
 .widget h3 {
 	display: inline-block;
+	font-weight: 300;
 	line-height: 1.75;
 	letter-spacing: 1px;
 	font-size: 22px;
@@ -304,7 +317,6 @@ html {
 
 .widget i {
 	float: left;
-	padding: 0 20% 0 0;
 }
 
 .widget p {
@@ -403,8 +415,9 @@ div.widget i.fa-check:before {
 
 div.widgetWide {
 	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
 	color: rgba(22, 0, 50, .6);
-	width: 95.5%;
+	width: 96.5%;
 	margin: 0 1.5% 3% 1.5%;
 	background-color: white;
 	display: inline-block;
@@ -418,15 +431,27 @@ div.summaryHeader {
 	padding: 2% 2% 0% 2%;
 }
 
+div.summaryHeader h2 {
+	padding-left: 5px;
+}
+
 div.widgetWide h2 {
+	color: rgba(22, 0, 50, .8);
+	letter-spacing: 1.5px;
 	display: inline-block;
 	text-align: left;
-	margin: 0 2.5% 1.5% 0;
+	margin: 0 2.5% 2% 0;
 }
 
 div.widgetWide i {
+	color: rgba(22, 0, 50, .8);
 	float: right;
 	margin-left: 2.5%;
+}
+
+div.summaryInfo {
+	overflow-x: scroll;
+	white-space: nowrap;
 }
 
 .summaryInfoBox {
@@ -434,6 +459,8 @@ div.widgetWide i {
 	text-align: center;
 	margin: 20px 0 0 0;
 	display: inline-block;
+	overflow-x: hidden;
+	overflow-y: hidden;
 }
 
 .summaryInfoTitle {
@@ -444,7 +471,7 @@ div.widgetWide i {
 	position: relative;
 	width:100px;
     height:100px;
-    border-radius:50px;
+    border-radius:50%;
     font-size:14px;
     line-height:100px;
     text-align:center;
@@ -453,6 +480,7 @@ div.widgetWide i {
 	background: -moz-linear-gradient(#2492b7, #2EFFDA);
 	background: linear-gradient(#2492b7, #2EFFDA);
 	margin: 22.5px 22.5px;
+	overflow-y: hidden;
 	-webkit-animation:spin 3s linear infinite;
     -moz-animation:spin 3s linear infinite;
     animation:spin 3s linear infinite;
@@ -462,7 +490,7 @@ div.widgetWide i {
 	position: relative;
 	width:100px;
     height:100px;
-    border-radius:50px;
+    border-radius:50%;
     font-size:14px;
     line-height:100px;
     text-align:center;
@@ -470,6 +498,7 @@ div.widgetWide i {
 	background: gray;
 	background: gray;
 	background: gray;
+	overflow-y: hidden;
 	margin: 22.5px 22.5px;
 	-webkit-animation:spin 3s linear infinite;
     -moz-animation:spin 3s linear infinite;
@@ -482,11 +511,11 @@ div.widgetWide i {
 
 .circleChartInner {
 	position: absolute;
-	top: 6.25px;
-	left: 6.25px;
+	top: 6%;
+	left: 6%;
 	width:87.5px;
     height:87.5px;
-    border-radius:43.75px;
+    border-radius:50%;
     line-height:87.5px;
     background: white;
 	margin: auto auto;
@@ -506,19 +535,21 @@ div.widgetWide i {
 	margin: 20px 0 0 0;
 	height: 144px;
 	display: inline-block;
-	background-color: rgba(22, 0, 50, .1);
+	background-color: rgba(22, 0, 50, .0);
 }
 
 hr {
 	border: 1px solid rgba(22, 0, 50, .1);
 }
 
+
 /*Dashboard Health*/
 
 .widgetHalf {
 	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
 	color: rgba(22, 0, 50, .6);
-	width: 42.25%;
+	width: 42.6%;
 	margin: 0 1.5% 3% 1.5%;
 	background-color: white;
 	display: inline-block;
@@ -530,12 +561,33 @@ hr {
 	overflow-y: scroll;
 }
 
+.healthWidgetClosed {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	color: rgba(22, 0, 50, .6);
+	width: 42.6%;
+	margin: 0 1.5% 3% 1.5%;
+	background-color: white;
+	display: inline-block;
+	border: 1px solid rgba(95, 89, 123, 0.15);
+	box-shadow: 5px 5px 10px rgba(95, 89, 123, 0.15);
+	padding: 0% 2% 0% 2%;
+	/*border-radius: 5px;*/
+	height: 70.5px;
+	margin-bottom: 363px;
+}
+
 .fixedHeader {
 	position: absolute;
 	padding-top: 20.5px;
+	margin-left: -2px;
 	z-index: 1;
-	width: 31.75%;
+	width: 32.25vw;
 	background-color: white;
+}
+
+.fixedHeader h2 {
+	padding-left: 5px;
 }
 
 .healthContent {
@@ -543,11 +595,15 @@ hr {
 }
 
 div.widgetHalf h2 {
+	font-weight: bold;
+	color: rgba(22, 0, 50, .8);
+	letter-spacing: 1.5px;
 	display: inline-block;
 	text-align: left;
 }
 
 div.widgetHalf i {
+	color: rgba(22, 0, 70, .8);
 	float: right;
 	margin-left: 2.5%;
 }
@@ -604,7 +660,6 @@ p.offlineBG {
 
 .moveUp {
 	position: relative;
-	margin-top: -3.5%;
 	margin-right: 31px;
 }
 
@@ -651,10 +706,486 @@ p.completedBG {
 
 .moveUp2 {
 	position: relative;
-	margin-top: -3.5%;
 	margin-right: 18px;
 }
 
 .liveFeedContent {
 	margin-top: 90px;
+}
+
+@media (max-width: 1320px) {
+	.widgetHalf {
+		width: 92.5%;
+	}
+
+	.fixedHeader {
+		width: 69.75vw;
+	}
+
+	.healthWidgetClosed {
+		margin-bottom: 3%;
+	}
+
+	.healthWidget h3 {
+		padding-top: .75%;
+		font-size: 16px;
+	}
+
+	.healthWidget p.indent {
+		padding-left: 2%;
+		margin-top: -.25%;
+	}
+
+	.healthWidget p.moveUp {
+		padding-left: 2%;
+		padding-top: 1.25%;
+	}
+
+	.healthWidget p.moveUp2 {
+		padding-left: 2%;
+		padding-top: 1.25%;
+	}
+
+}
+
+@media (max-width: 1250px) {
+
+	div.widget i.fa-database:before {
+		font-size: .7em;
+	}
+
+	div.widget i.fa-file:before {
+		font-size: .7em;
+	}
+
+	div.widget i.fa-ambulance:before {
+		font-size: .7em;
+	}
+
+	div.widget i.fa-archive:before {
+		font-size: .7em;
+	}
+
+	div.widget i.fa-server:before {
+		font-size: .7em;
+	}
+
+	div.widget i.fa-desktop:before {
+		font-size: .7em;
+	}
+
+	div.widget i.fa-camera:before {
+		font-size: .7em;
+	}
+
+	div.widget i.fa-check:before {
+		font-size: .7em;
+	}
+
+	.widget p {
+		font-size: 14px;
+	}
+
+	.widget h3 {
+		padding-bottom: 0%;
+	}
+
+	.widget {
+		width: 26%;
+	}
+
+	.navLeft h1, .navLeft a {
+		font-size: 20px;
+		letter-spacing: normal;
+	}
+
+	.navLeftGone h1, .navLeftGone a {
+		font-size: 20px;
+		letter-spacing: normal;
+	}
+
+	.nonLinkNav h1, .nonLinkNav a, .nonLinkNav i {
+		font-size: 20px;
+		letter-spacing: normal;
+	}
+
+	.miniNavLinks h1, .miniNavLinks a {
+		font-size: 16px;
+		letter-spacing: normal;
+	}
+
+	.healthWidget p {
+		max-width: 150px;
+	}
+
+}
+
+@media (max-width: 1000px) {
+
+	.navCircleOpen {
+		position: absolute;
+		width:150px;
+	    height:150px;
+	    border-radius:50%;
+	    font-size:14px;
+	    line-height:100px;
+	    text-align:center;
+		z-index: 5;
+		background: white;
+		border: 3px solid #FF9012;
+		margin: 25px 0 0 75%;
+		box-shadow: 5px 5px 10px rgba(95, 89, 123, 0.15);
+		transform: rotateY(0deg);
+		transition: transform .25s;
+	}
+
+	.navCircleClosed {
+		position: absolute;
+		width:150px;
+	    height:150px;
+	    border-radius:50%;
+	    font-size:14px;
+	    line-height:100px;
+	    text-align:center;
+		z-index: 5;
+		background: white;
+		border: 3px solid #FF9012;
+		margin: 25px 0 0 75%;
+		box-shadow: 5px 5px 10px rgba(95, 89, 123, 0.2);
+		transform: rotateY(180deg);
+		transition: transform .25s;
+		-webkit-transform: translate3d(0,0,0);
+
+	}
+
+	.navCircleClosed div.bar1 {
+		position: absolute;
+		height: 110px;
+		width: 15px;
+		background: rgb(22, 0, 70);
+		top: 13%;
+		left: 44.5%;
+		transform: rotate(45deg);
+		border-radius: 5%;
+	}
+
+	.navCircleClosed div.bar2 {
+		position: absolute;
+		height: 110px;
+		width: 15px;
+		background: rgb(22, 0, 70);
+		top: 13%;
+		left: 44.5%;
+		transform: rotate(-45deg);
+		border-radius: 5%;
+	}
+
+	.navCircleClosed div.bar3 {
+		display: none;
+	}
+
+	.navCircleOpen div.bar1 {
+		position: absolute;
+		height: 90px;
+		width: 12.5px;
+		border-radius: 5%;
+		background: rgb(22, 0, 70);
+		top: 1%;
+		left: 46%;
+		transform: rotate(90deg);
+	}
+
+	.navCircleOpen div.bar2 {
+		position: absolute;
+		height: 90px;
+		width: 12.5px;
+		border-radius: 5%;
+		background: rgb(22, 0, 70);
+		top: 19%;
+		left: 46%;
+		transform: rotate(90deg);
+	}
+
+	.navCircleOpen div.bar3 {
+		position: absolute;
+		height: 90px;
+		width: 12.5px;
+		border-radius: 5%;
+		background: rgb(22, 0, 70);
+		top: 37%;
+		left: 46%;
+		transform: rotate(90deg);
+	}
+
+
+
+	.navLeft {
+		visibility: hidden;
+		position: absolute;
+		width: 100%;
+		height: 150%;
+		z-index: 4;
+		background: -webkit-linear-gradient(#16003d, #8343f6);
+		background: -o-linear-gradient(#16003d, #8343f6);
+		background: -moz-linear-gradient(#16003d, #8343f6);
+		background: linear-gradient(#16003d, #8343f6);
+		color: white;
+		-webkit-clip-path: polygon(0 0, 100% 0, 1000% 100%, 0% 100%);
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+		transition: transform 0s;
+		margin-left: 0vw;
+		transform: translate(0vw, 0);
+	}
+
+	.navLeftGone {
+		position: absolute;
+		width: 100%;
+		height: 250vh;
+		z-index: 4;
+		background: -webkit-linear-gradient(#16003d, #8343f6);
+		background: -o-linear-gradient(#16003d, #8343f6);
+		background: -moz-linear-gradient(#16003d, #8343f6);
+		background: linear-gradient(#16003d, #8343f6);
+		color: white;
+		-webkit-clip-path: polygon(0 0, 100% 0, 1000% 100%, 0% 100%);
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+		transition: transform 0s;
+		margin-left: 0vw;
+		transform: translate(0vw, 0);
+	}
+
+	.navLeft img, .navLeftGone img {
+		display: none;
+	}
+
+	.navLinks {
+		margin-top: 250px;
+	}
+
+	.navLeft h1, .navLeft a {
+		font-size: 60px;
+		letter-spacing: normal;
+	}
+
+	.navLeftGone h1, .navLeftGone a {
+		font-size: 60px;
+		letter-spacing: normal;
+	}
+
+	.nonLinkNav h1, .nonLinkNav a, .nonLinkNav i {
+		font-size: 60px;
+		letter-spacing: normal;
+	}
+
+	.miniNavLinks h1, .miniNavLinks a {
+		font-size: 40px;
+		letter-spacing: normal;
+	}
+
+	.bodyContent {
+		margin: 0 auto 0 auto;
+		width: 100%;
+		padding-top: 220px;
+		transition: transform .5s;
+		transform: translate(0%, 0);
+	}
+
+	.bodyContent2 {
+		margin: 0 auto 0 auto;
+		width: 100%;
+		padding-top: 220px;
+		transition: transform 1.25s;
+	}
+
+	.mobileLogo {
+		display: block;
+		position: absolute;
+		/*padding-top: 1.25vh;*/
+		/*padding-right: 1.25vw;*/
+		width: 100vw;
+		height: 200px;
+		background: #16003d;
+	}
+
+	.mobileLogo img {
+		height: 185px;
+	}
+
+	.widget p {
+		font-size: 32px;
+	}
+
+	.widget h3 {
+		font-size: 48px;
+	}
+
+	.widget {
+		width: 42.5%;
+		height:150px;
+	}
+
+	div.widget i.fa-database:before {
+		font-size: 1.5em;
+	}
+
+	div.widget i.fa-file:before {
+		font-size: 1.5em;
+	}
+
+	div.widget i.fa-ambulance:before {
+		font-size: 1.5em;
+	}
+
+	div.widget i.fa-archive:before {
+		font-size: 1.5em;
+	}
+
+	div.widget i.fa-server:before {
+		font-size: 1.5em;
+	}
+
+	div.widget i.fa-desktop:before {
+		font-size: 1.5em;
+	}
+
+	div.widget i.fa-camera:before {
+		font-size: 1.5em;
+	}
+
+	div.widget i.fa-check:before {
+		font-size: 1.5em;
+	}
+
+	.widgetWide h2 {
+		font-size: 48px;
+		padding-right: 30px;
+	}
+
+	.widgetWide i {
+		font-size: 48px;
+		padding-left: 30px;
+	}
+
+	p.summaryInfoTitle {
+		font-size: 32px;
+		margin-bottom: 0px;
+	}
+
+	div.summaryInfoBox {
+		width: 400px;
+		Height: 400px;
+	}
+
+	p.circleChartInner {
+		font-size: 32px;
+	}
+
+	.circleChartOuter {
+		position: relative;
+		width:300px;
+	    height:300px;
+	    border-radius:50%;
+	    font-size:14px;
+	    line-height:300px;
+	    text-align:center;
+		background: -webkit-linear-gradient(#2492b7, #2EFFDA);
+		background: -o-linear-gradient(#2492b7, #2EFFDA);
+		background: -moz-linear-gradient(#2492b7, #2EFFDA);
+		background: linear-gradient(#2492b7, #2EFFDA);
+		margin: 25px 50px 50px 50px;
+		overflow-y: hidden;
+		-webkit-animation:spin 3s linear infinite;
+	    -moz-animation:spin 3s linear infinite;
+	    animation:spin 3s linear infinite;
+	}
+
+	.circleChartOuter2 {
+		position: relative;
+		width:300px;
+	    height:300px;
+	    border-radius:50%;
+	    font-size:14px;
+	    line-height:300px;
+	    text-align:center;
+		background: gray;
+		background: gray;
+		background: gray;
+		background: gray;
+		overflow-y: hidden;
+		margin: 25px 50px 50px 50px;
+		-webkit-animation:spin 3s linear infinite;
+	    -moz-animation:spin 3s linear infinite;
+	    animation:spin 3s linear infinite;
+	}
+
+	@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+	@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+	@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+	.circleChartInner {
+		position: absolute;
+		width:262.5px;
+	    height:262.5px;
+	    border-radius:50%;
+	    line-height:262.5px;
+	    background: white;
+		/*margin: 18.75px 18.75px 18.75px 18.75px;*/
+		top: 19px;
+		left: 19px;
+		-webkit-animation:spin2 3s linear infinite;
+		-moz-animation:spin2 3s linear infinite;
+		animation:spin2 3s linear infinite;
+	}
+
+
+	@-moz-keyframes spin2 { 100% { -moz-transform: rotate(-360deg); } }
+	@-webkit-keyframes spin2 { 100% { -webkit-transform: rotate(-360deg); } }
+	@keyframes spin2 { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
+
+	.widgetHalf h2, .widgetHalf i {
+		font-size: 48px;
+	}
+
+	.healthWidgetClosed {
+		height: 100px;
+	}
+
+	.fixedHeader {
+		width: 93vw;
+	}
+
+	.healthContent {
+    	margin-top: 120px;
+	}
+
+	.liveFeedContent {
+		margin-top: 120px;
+	}
+
+	.healthHR {
+		width: 93vw;
+	}
+
+	.healthWidget i {
+		margin-bottom: 15px;
+	}
+
+	.healthWidget h3 {
+		font-size: 24px;
+		width: 60vw;
+		padding: 0
+	}
+
+	.healthWidget p.indent {
+		padding: 0;
+		max-width: 60vw;
+	}
+
+	.healthWidget p.moveUp {
+		padding-top: 0;
+	}
+
+	.healthWidget p.moveUp2 {
+		padding-top: 0;
+	}
 }

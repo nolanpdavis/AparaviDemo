@@ -14,6 +14,7 @@ import Summary from './Summary'
 import Health from './Health'
 import LiveFeed from './LiveFeed'
 import NavCircle from './NavCircle'
+import Logo from './Logo'
 
 
 
@@ -33,6 +34,7 @@ export {
     TBD,
     Summary,
     Health,
-    LiveFeed
+    LiveFeed,
+    Logo
 
 }
