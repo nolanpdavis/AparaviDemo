@@ -122,8 +122,8 @@ i {
 	font-size: 1.1em;
 }
 
-.navLinks a:hover, .navLinks h1:hover {
-	text-decoration: underline;
+.navLinks h1:hover {
+	color: #FF9012;
 }
 
 .activeNavLink {
@@ -840,7 +840,7 @@ p.completedBG {
 	}
 
 	.navCircleClosed {
-		position: absolute;
+		position: fixed;
 		width:150px;
 	    height:150px;
 	    border-radius:50%;
@@ -938,9 +938,11 @@ p.completedBG {
 	}
 
 	.navLeftGone {
-		position: absolute;
+		position: fixed;
 		width: 100%;
 		height: 250vh;
+		overflow-x: hidden;
+		overflow-y: hidden;
 		z-index: 4;
 		background: -webkit-linear-gradient(#16003d, #8343f6);
 		background: -o-linear-gradient(#16003d, #8343f6);

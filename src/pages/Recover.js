@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Navbar, NavCircle } from '../modules'
+import { Navbar, DataProtected, FilesProtected, Recoveries, Archives, Appliances, Agents, Snapshots, Checkpoints, Summary, Health, LiveFeed, NavCircle, Logo } from '../modules'
 
 export default class Recover extends Component {
 	constructor(){
@@ -16,12 +16,14 @@ export default class Recover extends Component {
 	}
 
 	render(){
+
 		return(
 			<div>
-				<Navbar visible = {(this.state.navIsOpen) ? "navLeft" : "navLeftGone"}/>
-				<NavCircle navCircleOpen = {(this.state.navIsOpen) ? "navCircleRight" : "navCircleLeft"} onClick={this.handleNavOpen.bind(this)}/>
-				<div className="bodyContent">
-					<h1>Recover!</h1>
+				<Logo/>
+				<Navbar visible={(this.state.navIsOpen) ? "navLeft" : "navLeftGone"}/>
+				<NavCircle navCircleOpen={(this.state.navIsOpen) ? "navCircleOpen" : "navCircleClosed"} onClick={this.handleNavOpen.bind(this)}/>
+				<div className={(this.state.navIsOpen) ? "bodyContent" : "bodyContent2"}>
+					<h1>Rod, let me be your design guy!</h1>
 				</div>
 			</div>
 		)
