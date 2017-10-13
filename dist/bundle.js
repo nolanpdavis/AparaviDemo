@@ -740,47 +740,6 @@ module.exports = ReactDOMComponentTree;
 
 /***/ }),
 /* 7 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
- *
- */
-
-
-
-var canUseDOM = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
-
-/**
- * Simple, lightweight module assisting with the detection and context of
- * Worker. Helps avoid circular dependencies and allows code to reason about
- * whether or not they are in a Worker, even if they never include the main
- * `ReactWorker` dependency.
- */
-var ExecutionEnvironment = {
-
-  canUseDOM: canUseDOM,
-
-  canUseWorkers: typeof Worker !== 'undefined',
-
-  canUseEventListeners: canUseDOM && !!(window.addEventListener || window.attachEvent),
-
-  canUseViewport: canUseDOM && !!window.screen,
-
-  isInWorker: !canUseDOM // For now, this is true - might change in the future.
-
-};
-
-module.exports = ExecutionEnvironment;
-
-/***/ }),
-/* 8 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -837,6 +796,47 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ * All rights reserved.
+ *
+ * This source code is licensed under the BSD-style license found in the
+ * LICENSE file in the root directory of this source tree. An additional grant
+ * of patent rights can be found in the PATENTS file in the same directory.
+ *
+ */
+
+
+
+var canUseDOM = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
+
+/**
+ * Simple, lightweight module assisting with the detection and context of
+ * Worker. Helps avoid circular dependencies and allows code to reason about
+ * whether or not they are in a Worker, even if they never include the main
+ * `ReactWorker` dependency.
+ */
+var ExecutionEnvironment = {
+
+  canUseDOM: canUseDOM,
+
+  canUseWorkers: typeof Worker !== 'undefined',
+
+  canUseEventListeners: canUseDOM && !!(window.addEventListener || window.attachEvent),
+
+  canUseViewport: canUseDOM && !!window.screen,
+
+  isInWorker: !canUseDOM // For now, this is true - might change in the future.
+
+};
+
+module.exports = ExecutionEnvironment;
 
 /***/ }),
 /* 9 */
@@ -4411,7 +4411,7 @@ module.exports = SyntheticMouseEvent;
 
 
 
-var ExecutionEnvironment = __webpack_require__(7);
+var ExecutionEnvironment = __webpack_require__(8);
 var DOMNamespaces = __webpack_require__(48);
 
 var WHITESPACE_TEST = /^[ \r\n\t\f]/;
@@ -5575,7 +5575,7 @@ module.exports = getEventTarget;
 
 
 
-var ExecutionEnvironment = __webpack_require__(7);
+var ExecutionEnvironment = __webpack_require__(8);
 
 var useHasFeature;
 if (ExecutionEnvironment.canUseDOM) {
@@ -8654,7 +8654,7 @@ module.exports = forEachAccumulated;
 
 
 
-var ExecutionEnvironment = __webpack_require__(7);
+var ExecutionEnvironment = __webpack_require__(8);
 
 var contentKey = null;
 
@@ -9058,7 +9058,7 @@ module.exports = ViewportMetrics;
 
 
 
-var ExecutionEnvironment = __webpack_require__(7);
+var ExecutionEnvironment = __webpack_require__(8);
 var escapeTextContentForBrowser = __webpack_require__(36);
 var setInnerHTML = __webpack_require__(35);
 
@@ -11401,7 +11401,7 @@ var _reactDom2 = _interopRequireDefault(_reactDom);
 
 var _pages = __webpack_require__(199);
 
-var _reactRouterDom = __webpack_require__(8);
+var _reactRouterDom = __webpack_require__(7);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -13471,7 +13471,7 @@ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== 'undefined' && typeof __REACT_DEVT
 }
 
 if (process.env.NODE_ENV !== 'production') {
-  var ExecutionEnvironment = __webpack_require__(7);
+  var ExecutionEnvironment = __webpack_require__(8);
   if (ExecutionEnvironment.canUseDOM && window.top === window.self) {
     // First check if devtools is not installed
     if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === 'undefined') {
@@ -13707,7 +13707,7 @@ module.exports = ARIADOMPropertyConfig;
 
 
 var EventPropagators = __webpack_require__(25);
-var ExecutionEnvironment = __webpack_require__(7);
+var ExecutionEnvironment = __webpack_require__(8);
 var FallbackCompositionState = __webpack_require__(118);
 var SyntheticCompositionEvent = __webpack_require__(119);
 var SyntheticInputEvent = __webpack_require__(120);
@@ -14280,7 +14280,7 @@ module.exports = SyntheticInputEvent;
 
 var EventPluginHub = __webpack_require__(26);
 var EventPropagators = __webpack_require__(25);
-var ExecutionEnvironment = __webpack_require__(7);
+var ExecutionEnvironment = __webpack_require__(8);
 var ReactDOMComponentTree = __webpack_require__(6);
 var ReactUpdates = __webpack_require__(15);
 var SyntheticEvent = __webpack_require__(16);
@@ -14792,7 +14792,7 @@ module.exports = ReactOwner;
 var ReactInvalidSetStateWarningHook = __webpack_require__(125);
 var ReactHostOperationHistoryHook = __webpack_require__(126);
 var ReactComponentTreeHook = __webpack_require__(9);
-var ExecutionEnvironment = __webpack_require__(7);
+var ExecutionEnvironment = __webpack_require__(8);
 
 var performanceNow = __webpack_require__(127);
 var warning = __webpack_require__(2);
@@ -15277,7 +15277,7 @@ module.exports = performanceNow;
 
 
 
-var ExecutionEnvironment = __webpack_require__(7);
+var ExecutionEnvironment = __webpack_require__(8);
 
 var performance;
 
@@ -15715,7 +15715,7 @@ module.exports = ReactComponentBrowserEnvironment;
 var _prodInvariant = __webpack_require__(4);
 
 var DOMLazyTree = __webpack_require__(24);
-var ExecutionEnvironment = __webpack_require__(7);
+var ExecutionEnvironment = __webpack_require__(8);
 
 var createNodesFromMarkup = __webpack_require__(134);
 var emptyFunction = __webpack_require__(10);
@@ -15767,7 +15767,7 @@ module.exports = Danger;
 
 /*eslint-disable fb-www/unsafe-html*/
 
-var ExecutionEnvironment = __webpack_require__(7);
+var ExecutionEnvironment = __webpack_require__(8);
 
 var createArrayFromMixed = __webpack_require__(135);
 var getMarkupWrap = __webpack_require__(136);
@@ -15989,7 +15989,7 @@ module.exports = createArrayFromMixed;
 
 /*eslint-disable fb-www/unsafe-html */
 
-var ExecutionEnvironment = __webpack_require__(7);
+var ExecutionEnvironment = __webpack_require__(8);
 
 var invariant = __webpack_require__(1);
 
@@ -17172,7 +17172,7 @@ module.exports = AutoFocusUtils;
 
 
 var CSSProperty = __webpack_require__(80);
-var ExecutionEnvironment = __webpack_require__(7);
+var ExecutionEnvironment = __webpack_require__(8);
 var ReactInstrumentation = __webpack_require__(11);
 
 var camelizeStyleName = __webpack_require__(141);
@@ -17744,7 +17744,7 @@ module.exports = ReactEventEmitterMixin;
 
 
 
-var ExecutionEnvironment = __webpack_require__(7);
+var ExecutionEnvironment = __webpack_require__(8);
 
 /**
  * Generate a mapping of standard vendor prefixes using the defined style property and event name.
@@ -20949,7 +20949,7 @@ module.exports = ReactDefaultBatchingStrategy;
 var _assign = __webpack_require__(5);
 
 var EventListener = __webpack_require__(89);
-var ExecutionEnvironment = __webpack_require__(7);
+var ExecutionEnvironment = __webpack_require__(8);
 var PooledClass = __webpack_require__(19);
 var ReactDOMComponentTree = __webpack_require__(6);
 var ReactUpdates = __webpack_require__(15);
@@ -21373,7 +21373,7 @@ module.exports = ReactReconcileTransaction;
 
 
 
-var ExecutionEnvironment = __webpack_require__(7);
+var ExecutionEnvironment = __webpack_require__(8);
 
 var getNodeForCharacterOffset = __webpack_require__(173);
 var getTextContentAccessor = __webpack_require__(72);
@@ -22082,7 +22082,7 @@ module.exports = SVGDOMPropertyConfig;
 
 
 var EventPropagators = __webpack_require__(25);
-var ExecutionEnvironment = __webpack_require__(7);
+var ExecutionEnvironment = __webpack_require__(8);
 var ReactDOMComponentTree = __webpack_require__(6);
 var ReactInputSelection = __webpack_require__(90);
 var SyntheticEvent = __webpack_require__(16);
@@ -23682,7 +23682,7 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(8);
+var _reactRouterDom = __webpack_require__(7);
 
 var _ = __webpack_require__(38);
 
@@ -23743,9 +23743,8 @@ var Navbar = function (_Component) {
 						'div',
 						{ className: 'navLinks' },
 						_react2.default.createElement(
-							_reactRouterDom.NavLink,
-							{ to: '/', exact: true, activeClassName: 'activeNavLink' },
-							_react2.default.createElement('i', { className: 'fa fa-tachometer', 'aria-hidden': 'true' }),
+							'div',
+							{ className: 'nonLinkNav' },
 							_react2.default.createElement(
 								'h1',
 								null,
@@ -23753,9 +23752,8 @@ var Navbar = function (_Component) {
 							)
 						),
 						_react2.default.createElement(
-							_reactRouterDom.NavLink,
-							{ to: '/recover', activeClassName: 'activeNavLink' },
-							_react2.default.createElement('i', { className: 'fa fa-ambulance', 'aria-hidden': 'true' }),
+							'div',
+							{ className: 'nonLinkNav' },
 							_react2.default.createElement(
 								'h1',
 								null,
@@ -23765,31 +23763,24 @@ var Navbar = function (_Component) {
 						_react2.default.createElement(
 							'div',
 							{ className: 'nonLinkNav', onClick: this.handleAdminClick.bind(this) },
-							_react2.default.createElement('i', { className: 'fa fa-university fa-lg', 'aria-hidden': 'true' }),
 							_react2.default.createElement(
 								'h1',
 								null,
 								'Administration'
-							),
-							this.state.adminIsClicked ? _react2.default.createElement('i', { className: 'fa fa-caret-down fa-lg caretIcon1', 'aria-hidden': 'true' }) : _react2.default.createElement('i', { className: 'fa fa-caret-right fa-lg caretIcon1', 'aria-hidden': 'true' })
+							)
 						),
-						this.state.adminIsClicked && _react2.default.createElement(_.AdminNav, null),
 						_react2.default.createElement(
 							'div',
 							{ className: 'nonLinkNav', onClick: this.handleSettingsClick.bind(this) },
-							_react2.default.createElement('i', { className: 'fa fa-cogs fa-lg ', 'aria-hidden': 'true' }),
 							_react2.default.createElement(
 								'h1',
 								null,
 								'Settings'
-							),
-							this.state.settingsIsClicked ? _react2.default.createElement('i', { className: 'fa fa-caret-down fa-lg caretIcon1', 'aria-hidden': 'true' }) : _react2.default.createElement('i', { className: 'fa fa-caret-right fa-lg caretIcon1', 'aria-hidden': 'true' })
+							)
 						),
-						this.state.settingsIsClicked && _react2.default.createElement(_.SettingsNav, null),
 						_react2.default.createElement(
-							_reactRouterDom.NavLink,
-							{ to: '/logout', activeClassName: 'activeNavLink' },
-							_react2.default.createElement('i', { className: 'fa fa-sign-out fa-lg', 'aria-hidden': 'true' }),
+							'div',
+							{ className: 'nonLinkNav' },
 							_react2.default.createElement(
 								'h1',
 								null,
@@ -26145,7 +26136,7 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(8);
+var _reactRouterDom = __webpack_require__(7);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26207,7 +26198,7 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(8);
+var _reactRouterDom = __webpack_require__(7);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26288,7 +26279,7 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(8);
+var _reactRouterDom = __webpack_require__(7);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26389,7 +26380,7 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(8);
+var _reactRouterDom = __webpack_require__(7);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26451,7 +26442,7 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(8);
+var _reactRouterDom = __webpack_require__(7);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26513,7 +26504,7 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(8);
+var _reactRouterDom = __webpack_require__(7);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26575,7 +26566,7 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(8);
+var _reactRouterDom = __webpack_require__(7);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26637,7 +26628,7 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(8);
+var _reactRouterDom = __webpack_require__(7);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26699,7 +26690,7 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(8);
+var _reactRouterDom = __webpack_require__(7);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26761,7 +26752,7 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(8);
+var _reactRouterDom = __webpack_require__(7);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26823,7 +26814,7 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(8);
+var _reactRouterDom = __webpack_require__(7);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26879,7 +26870,7 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(8);
+var _reactRouterDom = __webpack_require__(7);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -27095,7 +27086,7 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(8);
+var _reactRouterDom = __webpack_require__(7);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -27370,7 +27361,7 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(8);
+var _reactRouterDom = __webpack_require__(7);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -27645,7 +27636,7 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(8);
+var _reactRouterDom = __webpack_require__(7);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -27707,7 +27698,7 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(8);
+var _reactRouterDom = __webpack_require__(7);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -27936,7 +27927,7 @@ exports = module.exports = __webpack_require__(249)(undefined);
 
 
 // module
-exports.push([module.i, "/*Reset all margins*/\n* {\n  margin: 0;\n  padding: 0;\n  overflow-x: hidden; }\n\n/*Background Image*/\nhtml {\n  background: url(" + __webpack_require__(250) + ") no-repeat center center fixed;\n  -webkit-background-size: cover;\n  -moz-background-size: cover;\n  -o-background-size: cover;\n  background-size: cover; }\n\n.mobileLogo {\n  display: none; }\n\n/*Navbar*/\n.navLeft {\n  position: fixed;\n  width: 25%;\n  height: 100%;\n  background: -webkit-linear-gradient(#16003d, #8343f6);\n  background: -o-linear-gradient(#16003d, #8343f6);\n  background: -moz-linear-gradient(#16003d, #8343f6);\n  background: linear-gradient(#16003d, #8343f6);\n  color: white;\n  -webkit-clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);\n  clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);\n  transition: transform .75s;\n  margin-left: -17.5vw;\n  transform: translate(17.5vw, 0); }\n\n.navLeftGone {\n  position: fixed;\n  width: 25%;\n  height: 100%;\n  background: -webkit-linear-gradient(#16003d, #8343f6);\n  background: -o-linear-gradient(#16003d, #8343f6);\n  background: -moz-linear-gradient(#16003d, #8343f6);\n  background: linear-gradient(#16003d, #8343f6);\n  color: white;\n  -webkit-clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);\n  clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);\n  transition: transform 2.25s;\n  margin-left: -17.5vw;\n  transform: translate(-25vw, 0); }\n\n.navLeftGone a, .navLeftGone h1, .navLeftGone img, .navLeftGone i, .navLeftGone div.navLinks, .navLeftGone div.nonLinkNav {\n  /*width: 0;\n\t height: 0;\n\t /*display: none;*/ }\n\n.navLeftGone a, .navLeftGone h1 {\n  font-family: 'Josefin Sans', sans-serif;\n  font-weight: 100;\n  letter-spacing: 1.75px;\n  text-decoration: none;\n  color: white;\n  display: block;\n  line-height: 2.75;\n  font-size: 22px;\n  /*font-weight: normal;*/\n  display: inline; }\n\n.navLeft a, .navLeft h1 {\n  font-family: 'Josefin Sans', sans-serif;\n  font-weight: 100;\n  letter-spacing: 2px;\n  text-decoration: none;\n  color: white;\n  display: block;\n  line-height: 2.75;\n  font-size: 22px;\n  /*font-weight: normal;*/\n  display: inline; }\n\ni {\n  overflow-y: visible;\n  overflow-x: visible; }\n\n.aparaviLogo {\n  padding: 5% 0 0 0;\n  margin: 0 auto 0 auto;\n  width: 80%; }\n\n.navLinks {\n  display: flex;\n  flex-direction: column;\n  margin: 10% 0 0 0; }\n\n.navLeft i {\n  padding: 0 5% 0 8%; }\n\n.navLeftGone i {\n  padding: 0 5% 0 8%; }\n\n.caretIcon1 {\n  padding: 0 5% 0 4% !important; }\n\n.fa-lg {\n  vertical-align: 0; }\n\n.fa-sign-out {\n  font-size: 1.1em; }\n\n.navLinks h1:hover {\n  color: #FF9012; }\n\n.activeNavLink {\n  background-color: rgba(255, 255, 255, 0.1);\n  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2); }\n\n.miniNavLinks {\n  display: flex;\n  flex-direction: column; }\n\n.miniNavLinks a {\n  line-height: 1.25px; }\n\n.miniNavLinks h1 {\n  font-size: 14px; }\n\n.miniNavLinks i {\n  padding-left: 16%; }\n\n.smallerIcon {\n  font-size: .7em; }\n\n.widthFix {\n  padding-left: 16.5% !important;\n  padding-right: 6% !important; }\n\n.widthFix2 {\n  padding-left: 16.5% !important;\n  padding-right: 5.75% !important; }\n\n/*Nav Cirle*/\n.navCircleOpen {\n  position: fixed;\n  width: 100px;\n  height: 100px;\n  border-radius: 50px;\n  font-size: 14px;\n  line-height: 100px;\n  text-align: center;\n  z-index: 2;\n  background: white;\n  /*background: -webkit-linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);\n\tbackground: -o-linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);\n\tbackground: -moz-linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);\n\tbackground: linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);*/\n  border: 3px solid #FF9012;\n  margin: 80vh 0 0 3.5vw;\n  box-shadow: 5px 5px 10px rgba(95, 89, 123, 0.15);\n  transform: rotateY(0deg);\n  transition: transform .25s; }\n\n.navCircleOpen:hover {\n  cursor: pointer; }\n\n.navCircleClosed {\n  position: fixed;\n  width: 100px;\n  height: 100px;\n  border-radius: 50px;\n  font-size: 14px;\n  line-height: 100px;\n  text-align: center;\n  border: 3px solid #FF9012;\n  z-index: 2;\n  background: white;\n  /*background: -webkit-linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);\n\tbackground: -o-linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);\n\tbackground: -moz-linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);\n\tbackground: linear-gradient(135deg, #6F37B2, #8343f6, #FF9012);*/\n  margin: 80vh 0 0 3.5vw;\n  box-shadow: 5px 5px 10px rgba(95, 89, 123, 0.2);\n  transform: rotateY(180deg);\n  transition: transform .25s; }\n\n.navCircleClosed:hover {\n  cursor: pointer; }\n\n.navCircleOpen div.bar1 {\n  position: absolute;\n  height: 50px;\n  width: 7.5px;\n  background: #160046;\n  top: 25%;\n  left: 47%;\n  transform: rotate(45deg);\n  border-radius: 5%; }\n\n.navCircleOpen div.bar2 {\n  position: absolute;\n  height: 50px;\n  width: 7.5px;\n  background: #160046;\n  top: 25%;\n  left: 47%;\n  transform: rotate(-45deg);\n  border-radius: 5%; }\n\n.navCircleClosed div.bar1 {\n  position: absolute;\n  height: 50px;\n  width: 7.5px;\n  border-radius: 10%;\n  background: #160046;\n  top: 9%;\n  left: 44.5%;\n  transform: rotate(90deg); }\n\n.navCircleClosed div.bar2 {\n  position: absolute;\n  height: 50px;\n  width: 7.5px;\n  border-radius: 10%;\n  background: #160046;\n  top: 25%;\n  left: 44.5%;\n  transform: rotate(90deg); }\n\n.navCircleClosed div.bar3 {\n  position: absolute;\n  height: 50px;\n  width: 7.5px;\n  border-radius: 10%;\n  background: #160046;\n  top: 41%;\n  left: 44.5%;\n  transform: rotate(90deg); }\n\n/*Content*/\n.bodyContent {\n  margin: 0 auto 0 auto;\n  width: 75%;\n  padding-top: 3%;\n  transition: transform .5s;\n  transform: translate(16.75%, 0); }\n\n.bodyContent2 {\n  margin: 0 auto 0 auto;\n  width: 75%;\n  padding-top: 3%;\n  transition: transform 1.25s; }\n\n/*Dashboard*/\n.widget {\n  font-family: 'Roboto', sans-serif;\n  font-weight: 300;\n  color: rgba(22, 0, 50, 0.6);\n  background-color: white;\n  display: inline-block;\n  padding: 2% 2% 2% 2%;\n  margin: 0 1.5% 3% 1.5%;\n  width: 17.75%;\n  border: 1px solid rgba(95, 89, 123, 0.15);\n  box-shadow: 5px 5px 10px rgba(95, 89, 123, 0.15);\n  text-align: right;\n  border-radius: 5px; }\n\n.widget h3 {\n  display: inline-block;\n  font-weight: 300;\n  line-height: 1.75;\n  letter-spacing: 1px;\n  font-size: 22px;\n  padding-bottom: 10%; }\n\n.widget i {\n  float: left; }\n\n.widget p {\n  font-size: 16px; }\n\ndiv.widget i.fa-database:before {\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  color: transparent;\n  -webkit-background-clip: text;\n  background-clip: text;\n  font-size: .85em; }\n\ndiv.widget i.fa-file:before {\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  color: transparent;\n  -webkit-background-clip: text;\n  background-clip: text;\n  font-size: .85em; }\n\ndiv.widget i.fa-ambulance:before {\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  color: transparent;\n  -webkit-background-clip: text;\n  background-clip: text;\n  font-size: .85em; }\n\ndiv.widget i.fa-archive:before {\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  color: transparent;\n  -webkit-background-clip: text;\n  background-clip: text;\n  font-size: .85em; }\n\ndiv.widget i.fa-server:before {\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  color: transparent;\n  -webkit-background-clip: text;\n  background-clip: text;\n  font-size: .85em; }\n\ndiv.widget i.fa-desktop:before {\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  color: transparent;\n  -webkit-background-clip: text;\n  background-clip: text;\n  font-size: .85em; }\n\ndiv.widget i.fa-camera:before {\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  color: transparent;\n  -webkit-background-clip: text;\n  background-clip: text;\n  font-size: .85em; }\n\ndiv.widget i.fa-check:before {\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  color: transparent;\n  -webkit-background-clip: text;\n  background-clip: text;\n  font-size: .85em; }\n\n/*Dashboard Summary*/\ndiv.widgetWide {\n  font-family: 'Roboto', sans-serif;\n  font-weight: 300;\n  color: rgba(22, 0, 50, 0.6);\n  width: 96.5%;\n  margin: 0 1.5% 3% 1.5%;\n  background-color: white;\n  display: inline-block;\n  border: 1px solid rgba(95, 89, 123, 0.15);\n  box-shadow: 5px 5px 10px rgba(95, 89, 123, 0.15);\n  border-radius: 5px; }\n\ndiv.summaryHeader {\n  padding: 2% 2% 0% 2%; }\n\ndiv.summaryHeader h2 {\n  padding-left: 5px; }\n\ndiv.widgetWide h2 {\n  color: rgba(22, 0, 50, 0.8);\n  letter-spacing: 1.5px;\n  display: inline-block;\n  text-align: left;\n  margin: 0 2.5% 2% 0; }\n\ndiv.widgetWide i {\n  color: rgba(22, 0, 50, 0.8);\n  float: right;\n  margin-left: 2.5%; }\n\ndiv.summaryInfo {\n  overflow-x: scroll;\n  white-space: nowrap; }\n\n.summaryInfoBox {\n  width: 147px;\n  text-align: center;\n  margin: 20px 0 0 0;\n  display: inline-block;\n  overflow-x: hidden;\n  overflow-y: hidden; }\n\n.summaryInfoTitle {\n  margin-bottom: 20px; }\n\n.circleChartOuter {\n  position: relative;\n  width: 100px;\n  height: 100px;\n  border-radius: 50%;\n  font-size: 14px;\n  line-height: 100px;\n  text-align: center;\n  background: -webkit-linear-gradient(#2492b7, #2EFFDA);\n  background: -o-linear-gradient(#2492b7, #2EFFDA);\n  background: -moz-linear-gradient(#2492b7, #2EFFDA);\n  background: linear-gradient(#2492b7, #2EFFDA);\n  margin: 22.5px 22.5px;\n  overflow-y: hidden;\n  -webkit-animation: spin 3s linear infinite;\n  -moz-animation: spin 3s linear infinite;\n  animation: spin 3s linear infinite; }\n\n.circleChartOuter2 {\n  position: relative;\n  width: 100px;\n  height: 100px;\n  border-radius: 50%;\n  font-size: 14px;\n  line-height: 100px;\n  text-align: center;\n  background: gray;\n  background: gray;\n  background: gray;\n  background: gray;\n  overflow-y: hidden;\n  margin: 22.5px 22.5px;\n  -webkit-animation: spin 3s linear infinite;\n  -moz-animation: spin 3s linear infinite;\n  animation: spin 3s linear infinite; }\n\n@-moz-keyframes spin {\n  100% {\n    -moz-transform: rotate(360deg); } }\n\n@-webkit-keyframes spin {\n  100% {\n    -webkit-transform: rotate(360deg); } }\n\n@keyframes spin {\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n.circleChartInner {\n  position: absolute;\n  top: 6%;\n  left: 6%;\n  width: 87.5px;\n  height: 87.5px;\n  border-radius: 50%;\n  line-height: 87.5px;\n  background: white;\n  margin: auto auto;\n  -webkit-animation: spin2 3s linear infinite;\n  -moz-animation: spin2 3s linear infinite;\n  animation: spin2 3s linear infinite; }\n\n@-moz-keyframes spin2 {\n  100% {\n    -moz-transform: rotate(-360deg); } }\n\n@-webkit-keyframes spin2 {\n  100% {\n    -webkit-transform: rotate(-360deg); } }\n\n@keyframes spin2 {\n  100% {\n    -webkit-transform: rotate(-360deg);\n    transform: rotate(-360deg); } }\n\n.verticalLine {\n  position: absolute;\n  width: 2px;\n  margin: 20px 0 0 0;\n  height: 144px;\n  display: inline-block;\n  background-color: rgba(22, 0, 50, 0); }\n\nhr {\n  border: 1px solid rgba(22, 0, 50, 0.1); }\n\n/*Dashboard Health*/\n.widgetHalf {\n  font-family: 'Roboto', sans-serif;\n  font-weight: 300;\n  color: rgba(22, 0, 50, 0.6);\n  width: 42.6%;\n  margin: 0 1.5% 3% 1.5%;\n  background-color: white;\n  display: inline-block;\n  border: 1px solid rgba(95, 89, 123, 0.15);\n  box-shadow: 5px 5px 10px rgba(95, 89, 123, 0.15);\n  padding: 0% 2% 2% 2%;\n  border-radius: 5px;\n  height: 380px;\n  overflow-y: scroll; }\n\n.healthWidgetClosed {\n  font-family: 'Roboto', sans-serif;\n  font-weight: 300;\n  color: rgba(22, 0, 50, 0.6);\n  width: 42.6%;\n  margin: 0 1.5% 3% 1.5%;\n  background-color: white;\n  display: inline-block;\n  border: 1px solid rgba(95, 89, 123, 0.15);\n  box-shadow: 5px 5px 10px rgba(95, 89, 123, 0.15);\n  padding: 0% 2% 0% 2%;\n  /*border-radius: 5px;*/\n  height: 70.5px;\n  margin-bottom: 363px; }\n\n.fixedHeader {\n  position: absolute;\n  padding-top: 20.5px;\n  margin-left: -2px;\n  z-index: 1;\n  width: 32.25vw;\n  background-color: white; }\n\n.fixedHeader h2 {\n  padding-left: 5px; }\n\n.healthContent {\n  margin-top: 90px; }\n\ndiv.widgetHalf h2 {\n  font-weight: bold;\n  color: rgba(22, 0, 50, 0.8);\n  letter-spacing: 1.5px;\n  display: inline-block;\n  text-align: left; }\n\ndiv.widgetHalf i {\n  color: rgba(22, 0, 70, 0.8);\n  float: right;\n  margin-left: 2.5%; }\n\n.healthWidget h3 {\n  font-family: 'Merriweather Sans', sans-serif;\n  display: inline-block; }\n\n.healthWidget i.fa-desktop:before {\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  color: transparent;\n  -webkit-background-clip: text;\n  background-clip: text; }\n\n.healthWidget i.fa-desktop {\n  float: left;\n  padding: 5px 12.5px 0 0;\n  margin-left: 0; }\n\n.healthWidget p {\n  font-size: 12px;\n  display: inline-block;\n  max-width: 240px;\n  white-space: nowrap;\n  overflow-x: scroll; }\n\np.offlineBG {\n  text-align: center;\n  font-family: 'Merriweather Sans', sans-serif;\n  font-size: 12px;\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  display: inline-block;\n  width: 150px;\n  padding: 1% 2%;\n  color: white;\n  border-radius: 25px; }\n\n.floatRight {\n  float: right; }\n\n.moveUp {\n  position: relative;\n  margin-right: 31px; }\n\n.healthHR {\n  margin: 20px 0 20px 0; }\n\n.healthHR2 {\n  margin-bottom: 0; }\n\n/*Dashboard Live Feed */\n.healthWidget i.fa-server:before {\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  color: transparent;\n  -webkit-background-clip: text;\n  background-clip: text; }\n\n.healthWidget i.fa-server {\n  float: left;\n  padding: 5px 12.5px 0 0;\n  margin-left: 0; }\n\np.completedBG {\n  font-family: 'Merriweather Sans', sans-serif;\n  font-size: 16px;\n  text-align: center;\n  background: -webkit-linear-gradient(135deg, #2492b7, #2492b7 30%, #2EFFDA);\n  background: -o-linear-gradient(135deg, #2492b7, #2492b7 30%, #2EFFDA);\n  background: -moz-linear-gradient(135deg, #2492b7, #2492b7 30%, #2EFFDA);\n  background: linear-gradient(135deg, #2492b7, #2492b7 30%, #2EFFDA);\n  display: inline-block;\n  color: white;\n  width: 115px;\n  padding: 0.5% 2%;\n  border-radius: 25px; }\n\n.moveUp2 {\n  position: relative;\n  margin-right: 18px; }\n\n.liveFeedContent {\n  margin-top: 90px; }\n\n@media (max-width: 1320px) {\n  .widgetHalf {\n    width: 92.5%; }\n  .fixedHeader {\n    width: 69.75vw; }\n  .healthWidgetClosed {\n    margin-bottom: 3%; }\n  .healthWidget h3 {\n    padding-top: .75%;\n    font-size: 16px; }\n  .healthWidget p.indent {\n    padding-left: 2%;\n    margin-top: -.25%; }\n  .healthWidget p.moveUp {\n    padding-left: 2%;\n    padding-top: 1.25%; }\n  .healthWidget p.moveUp2 {\n    padding-left: 2%;\n    padding-top: 1.25%; } }\n\n@media (max-width: 1250px) {\n  div.widget i.fa-database:before {\n    font-size: .7em; }\n  div.widget i.fa-file:before {\n    font-size: .7em; }\n  div.widget i.fa-ambulance:before {\n    font-size: .7em; }\n  div.widget i.fa-archive:before {\n    font-size: .7em; }\n  div.widget i.fa-server:before {\n    font-size: .7em; }\n  div.widget i.fa-desktop:before {\n    font-size: .7em; }\n  div.widget i.fa-camera:before {\n    font-size: .7em; }\n  div.widget i.fa-check:before {\n    font-size: .7em; }\n  .widget p {\n    font-size: 14px; }\n  .widget h3 {\n    padding-bottom: 0%; }\n  .widget {\n    width: 26%; }\n  .navLeft h1, .navLeft a {\n    font-size: 20px;\n    letter-spacing: normal; }\n  .navLeftGone h1, .navLeftGone a {\n    font-size: 20px;\n    letter-spacing: normal; }\n  .nonLinkNav h1, .nonLinkNav a, .nonLinkNav i {\n    font-size: 20px;\n    letter-spacing: normal; }\n  .miniNavLinks h1, .miniNavLinks a {\n    font-size: 16px;\n    letter-spacing: normal; }\n  .healthWidget p {\n    max-width: 150px; } }\n\n@media (max-width: 1000px) {\n  .navCircleOpen {\n    position: absolute;\n    width: 150px;\n    height: 150px;\n    border-radius: 50%;\n    font-size: 14px;\n    line-height: 100px;\n    text-align: center;\n    z-index: 5;\n    background: white;\n    border: 3px solid #FF9012;\n    margin: 25px 0 0 75%;\n    box-shadow: 5px 5px 10px rgba(95, 89, 123, 0.15);\n    transform: rotateY(0deg);\n    transition: transform .25s; }\n  .navCircleClosed {\n    position: fixed;\n    width: 150px;\n    height: 150px;\n    border-radius: 50%;\n    font-size: 14px;\n    line-height: 100px;\n    text-align: center;\n    z-index: 5;\n    background: white;\n    border: 3px solid #FF9012;\n    margin: 25px 0 0 75%;\n    box-shadow: 5px 5px 10px rgba(95, 89, 123, 0.2);\n    transform: rotateY(180deg);\n    transition: transform .25s;\n    -webkit-transform: translate3d(0, 0, 0); }\n  .navCircleClosed div.bar1 {\n    position: absolute;\n    height: 110px;\n    width: 15px;\n    background: #160046;\n    top: 13%;\n    left: 44.5%;\n    transform: rotate(45deg);\n    border-radius: 5%; }\n  .navCircleClosed div.bar2 {\n    position: absolute;\n    height: 110px;\n    width: 15px;\n    background: #160046;\n    top: 13%;\n    left: 44.5%;\n    transform: rotate(-45deg);\n    border-radius: 5%; }\n  .navCircleClosed div.bar3 {\n    display: none; }\n  .navCircleOpen div.bar1 {\n    position: absolute;\n    height: 90px;\n    width: 12.5px;\n    border-radius: 5%;\n    background: #160046;\n    top: 1%;\n    left: 46%;\n    transform: rotate(90deg); }\n  .navCircleOpen div.bar2 {\n    position: absolute;\n    height: 90px;\n    width: 12.5px;\n    border-radius: 5%;\n    background: #160046;\n    top: 19%;\n    left: 46%;\n    transform: rotate(90deg); }\n  .navCircleOpen div.bar3 {\n    position: absolute;\n    height: 90px;\n    width: 12.5px;\n    border-radius: 5%;\n    background: #160046;\n    top: 37%;\n    left: 46%;\n    transform: rotate(90deg); }\n  .navLeft {\n    visibility: hidden;\n    position: absolute;\n    width: 100%;\n    height: 150%;\n    z-index: 4;\n    background: -webkit-linear-gradient(#16003d, #8343f6);\n    background: -o-linear-gradient(#16003d, #8343f6);\n    background: -moz-linear-gradient(#16003d, #8343f6);\n    background: linear-gradient(#16003d, #8343f6);\n    color: white;\n    -webkit-clip-path: polygon(0 0, 100% 0, 1000% 100%, 0% 100%);\n    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);\n    transition: transform 0s;\n    margin-left: 0vw;\n    transform: translate(0vw, 0); }\n  .navLeftGone {\n    position: fixed;\n    width: 100%;\n    height: 250vh;\n    overflow-x: hidden;\n    overflow-y: hidden;\n    z-index: 4;\n    background: -webkit-linear-gradient(#16003d, #8343f6);\n    background: -o-linear-gradient(#16003d, #8343f6);\n    background: -moz-linear-gradient(#16003d, #8343f6);\n    background: linear-gradient(#16003d, #8343f6);\n    color: white;\n    -webkit-clip-path: polygon(0 0, 100% 0, 1000% 100%, 0% 100%);\n    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);\n    transition: transform 0s;\n    margin-left: 0vw;\n    transform: translate(0vw, 0); }\n  .navLeft img, .navLeftGone img {\n    display: none; }\n  .navLinks {\n    margin-top: 250px; }\n  .navLeft h1, .navLeft a {\n    font-size: 60px;\n    letter-spacing: normal; }\n  .navLeftGone h1, .navLeftGone a {\n    font-size: 60px;\n    letter-spacing: normal; }\n  .nonLinkNav h1, .nonLinkNav a, .nonLinkNav i {\n    font-size: 60px;\n    letter-spacing: normal; }\n  .miniNavLinks h1, .miniNavLinks a {\n    font-size: 40px;\n    letter-spacing: normal; }\n  .bodyContent {\n    margin: 0 auto 0 auto;\n    width: 100%;\n    padding-top: 220px;\n    transition: transform .5s;\n    transform: translate(0%, 0); }\n  .bodyContent2 {\n    margin: 0 auto 0 auto;\n    width: 100%;\n    padding-top: 220px;\n    transition: transform 1.25s; }\n  .mobileLogo {\n    display: block;\n    position: absolute;\n    /*padding-top: 1.25vh;*/\n    /*padding-right: 1.25vw;*/\n    width: 100vw;\n    height: 200px;\n    background: #16003d; }\n  .mobileLogo img {\n    height: 185px; }\n  .widget p {\n    font-size: 32px; }\n  .widget h3 {\n    font-size: 48px; }\n  .widget {\n    width: 42.5%;\n    height: 150px; }\n  div.widget i.fa-database:before {\n    font-size: 1.5em; }\n  div.widget i.fa-file:before {\n    font-size: 1.5em; }\n  div.widget i.fa-ambulance:before {\n    font-size: 1.5em; }\n  div.widget i.fa-archive:before {\n    font-size: 1.5em; }\n  div.widget i.fa-server:before {\n    font-size: 1.5em; }\n  div.widget i.fa-desktop:before {\n    font-size: 1.5em; }\n  div.widget i.fa-camera:before {\n    font-size: 1.5em; }\n  div.widget i.fa-check:before {\n    font-size: 1.5em; }\n  .widgetWide h2 {\n    font-size: 48px;\n    padding-right: 30px; }\n  .widgetWide i {\n    font-size: 48px;\n    padding-left: 30px; }\n  p.summaryInfoTitle {\n    font-size: 32px;\n    margin-bottom: 0px; }\n  div.summaryInfoBox {\n    width: 400px;\n    Height: 400px; }\n  p.circleChartInner {\n    font-size: 32px; }\n  .circleChartOuter {\n    position: relative;\n    width: 300px;\n    height: 300px;\n    border-radius: 50%;\n    font-size: 14px;\n    line-height: 300px;\n    text-align: center;\n    background: -webkit-linear-gradient(#2492b7, #2EFFDA);\n    background: -o-linear-gradient(#2492b7, #2EFFDA);\n    background: -moz-linear-gradient(#2492b7, #2EFFDA);\n    background: linear-gradient(#2492b7, #2EFFDA);\n    margin: 25px 50px 50px 50px;\n    overflow-y: hidden;\n    -webkit-animation: spin 3s linear infinite;\n    -moz-animation: spin 3s linear infinite;\n    animation: spin 3s linear infinite; }\n  .circleChartOuter2 {\n    position: relative;\n    width: 300px;\n    height: 300px;\n    border-radius: 50%;\n    font-size: 14px;\n    line-height: 300px;\n    text-align: center;\n    background: gray;\n    background: gray;\n    background: gray;\n    background: gray;\n    overflow-y: hidden;\n    margin: 25px 50px 50px 50px;\n    -webkit-animation: spin 3s linear infinite;\n    -moz-animation: spin 3s linear infinite;\n    animation: spin 3s linear infinite; }\n  @-moz-keyframes spin {\n    100% {\n      -moz-transform: rotate(360deg); } }\n  @-webkit-keyframes spin {\n    100% {\n      -webkit-transform: rotate(360deg); } }\n  @keyframes spin {\n    100% {\n      -webkit-transform: rotate(360deg);\n      transform: rotate(360deg); } }\n  .circleChartInner {\n    position: absolute;\n    width: 262.5px;\n    height: 262.5px;\n    border-radius: 50%;\n    line-height: 262.5px;\n    background: white;\n    /*margin: 18.75px 18.75px 18.75px 18.75px;*/\n    top: 19px;\n    left: 19px;\n    -webkit-animation: spin2 3s linear infinite;\n    -moz-animation: spin2 3s linear infinite;\n    animation: spin2 3s linear infinite; }\n  @-moz-keyframes spin2 {\n    100% {\n      -moz-transform: rotate(-360deg); } }\n  @-webkit-keyframes spin2 {\n    100% {\n      -webkit-transform: rotate(-360deg); } }\n  @keyframes spin2 {\n    100% {\n      -webkit-transform: rotate(-360deg);\n      transform: rotate(-360deg); } }\n  .widgetHalf h2, .widgetHalf i {\n    font-size: 48px; }\n  .healthWidgetClosed {\n    height: 100px; }\n  .fixedHeader {\n    width: 93vw; }\n  .healthContent {\n    margin-top: 120px; }\n  .liveFeedContent {\n    margin-top: 120px; }\n  .healthHR {\n    width: 93vw; }\n  .healthWidget i {\n    margin-bottom: 15px; }\n  .healthWidget h3 {\n    font-size: 24px;\n    width: 60vw;\n    padding: 0; }\n  .healthWidget p.indent {\n    padding: 0;\n    max-width: 60vw; }\n  .healthWidget p.moveUp {\n    padding-top: 0; }\n  .healthWidget p.moveUp2 {\n    padding-top: 0; } }\n", ""]);
+exports.push([module.i, "/*Reset all margins*/\n* {\n  margin: 0;\n  padding: 0;\n  overflow-x: hidden; }\n\n/*Background Image*/\nhtml {\n  background: url(" + __webpack_require__(250) + ") no-repeat center center fixed;\n  -webkit-background-size: cover;\n  -moz-background-size: cover;\n  -o-background-size: cover;\n  background-size: cover; }\n\n.mobileLogo {\n  display: none; }\n\n/*Navbar*/\n.navLeft {\n  z-index: 20;\n  position: fixed;\n  width: 100%;\n  height: 80px;\n  background: -webkit-linear-gradient(#16003d, #8343f6);\n  background: -o-linear-gradient(#16003d, #8343f6);\n  background: -moz-linear-gradient(#16003d, #8343f6);\n  background: linear-gradient(#16003d, #8343f6);\n  color: white; }\n\n.navLeftGone a, .navLeftGone h1, .navLeftGone img, .navLeftGone i, .navLeftGone div.navLinks, .navLeftGone div.nonLinkNav {\n  /*width: 0;\n\t height: 0;\n\t /*display: none;*/ }\n\n/*.navLeftGone a, .navLeftGone h1 {\n\tfont-family: 'Josefin Sans', sans-serif;\n \tfont-weight: 100;\n \tletter-spacing: 1.75px;\n \ttext-decoration: none;\n \tcolor: white;\n \tdisplay: block;\n \tline-height: 2.75;\n \tfont-size: 22px;\n \tfont-weight: normal;\n \tdisplay: inline;\n }*/\n.navLeft a, .navLeft h1 {\n  font-family: 'Josefin Sans', sans-serif;\n  font-weight: 100;\n  letter-spacing: .5px;\n  text-decoration: none;\n  color: white;\n  display: block;\n  line-height: 2.75;\n  font-size: 20px;\n  /*font-weight: normal;*/\n  display: inline; }\n\ni {\n  overflow-y: visible;\n  overflow-x: visible; }\n\n.aparaviLogo {\n  display: inline-flex;\n  flex-direction: row;\n  align-items: center;\n  height: 80px;\n  width: 225px;\n  /*padding: 5% 0 0 0;\n\tmargin: 0 auto 0 auto;\n\twidth: 80%;*/ }\n\n.navLinks {\n  width: calc(100% - 300px);\n  margin-left: 50px;\n  min-width: 450px;\n  position: absolute;\n  height: 80px;\n  display: inline-flex;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center; }\n\n.caretIcon1 {\n  padding: 0 5% 0 4% !important; }\n\n.fa-lg {\n  vertical-align: 0; }\n\n/*.miniNavLinks {\n\tdisplay: flex;\n\tflex-direction: row;\n}*/\n/*.miniNavLinks a {\n\tline-height: 1.25px;\n}*/\n.miniNavLinks h1 {\n  font-size: 14px; }\n\n.miniNavLinks i {\n  padding-left: 16%; }\n\n.smallerIcon {\n  font-size: .7em; }\n\n.widthFix {\n  padding-left: 16.5% !important;\n  padding-right: 6% !important; }\n\n.widthFix2 {\n  padding-left: 16.5% !important;\n  padding-right: 5.75% !important; }\n\n/*Content*/\n.bodyContent {\n  margin: 80px auto 0 auto;\n  width: 75%;\n  padding-top: 3%; }\n\n.bodyContent2 {\n  margin: 0 auto 0 auto;\n  width: 75%;\n  padding-top: 3%; }\n\n/*Dashboard*/\n.widget {\n  font-family: 'Roboto', sans-serif;\n  font-weight: 300;\n  color: rgba(22, 0, 50, 0.6);\n  background-color: white;\n  display: inline-block;\n  padding: 2% 2% 2% 2%;\n  margin: 0 1.5% 3% 1.5%;\n  width: 17.75%;\n  border: 1px solid rgba(95, 89, 123, 0.15);\n  box-shadow: 5px 5px 10px rgba(95, 89, 123, 0.15);\n  text-align: right;\n  border-radius: 5px; }\n\n.widget h3 {\n  display: inline-block;\n  font-weight: 300;\n  line-height: 1.75;\n  letter-spacing: 1px;\n  font-size: 22px;\n  padding-bottom: 10%; }\n\n.widget i {\n  float: left; }\n\n.widget p {\n  font-size: 16px; }\n\ndiv.widget i.fa-database:before {\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  color: transparent;\n  -webkit-background-clip: text;\n  background-clip: text;\n  font-size: .85em; }\n\ndiv.widget i.fa-file:before {\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  color: transparent;\n  -webkit-background-clip: text;\n  background-clip: text;\n  font-size: .85em; }\n\ndiv.widget i.fa-ambulance:before {\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  color: transparent;\n  -webkit-background-clip: text;\n  background-clip: text;\n  font-size: .85em; }\n\ndiv.widget i.fa-archive:before {\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  color: transparent;\n  -webkit-background-clip: text;\n  background-clip: text;\n  font-size: .85em; }\n\ndiv.widget i.fa-server:before {\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  color: transparent;\n  -webkit-background-clip: text;\n  background-clip: text;\n  font-size: .85em; }\n\ndiv.widget i.fa-desktop:before {\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  color: transparent;\n  -webkit-background-clip: text;\n  background-clip: text;\n  font-size: .85em; }\n\ndiv.widget i.fa-camera:before {\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  color: transparent;\n  -webkit-background-clip: text;\n  background-clip: text;\n  font-size: .85em; }\n\ndiv.widget i.fa-check:before {\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  color: transparent;\n  -webkit-background-clip: text;\n  background-clip: text;\n  font-size: .85em; }\n\n/*Dashboard Summary*/\ndiv.widgetWide {\n  font-family: 'Roboto', sans-serif;\n  font-weight: 300;\n  color: rgba(22, 0, 50, 0.6);\n  width: 96.5%;\n  margin: 0 1.5% 3% 1.5%;\n  background-color: white;\n  display: inline-block;\n  border: 1px solid rgba(95, 89, 123, 0.15);\n  box-shadow: 5px 5px 10px rgba(95, 89, 123, 0.15);\n  border-radius: 5px; }\n\ndiv.summaryHeader {\n  padding: 2% 2% 0% 2%; }\n\ndiv.summaryHeader h2 {\n  padding-left: 5px; }\n\ndiv.widgetWide h2 {\n  color: rgba(22, 0, 50, 0.8);\n  letter-spacing: 1.5px;\n  display: inline-block;\n  text-align: left;\n  margin: 0 2.5% 2% 0; }\n\ndiv.widgetWide i {\n  color: rgba(22, 0, 50, 0.8);\n  float: right;\n  margin-left: 2.5%; }\n\ndiv.summaryInfo {\n  overflow-x: scroll;\n  white-space: nowrap; }\n\n.summaryInfoBox {\n  width: 147px;\n  text-align: center;\n  margin: 20px 0 0 0;\n  display: inline-block;\n  overflow-x: hidden;\n  overflow-y: hidden; }\n\n.summaryInfoTitle {\n  margin-bottom: 20px; }\n\n.circleChartOuter {\n  position: relative;\n  width: 100px;\n  height: 100px;\n  border-radius: 50%;\n  font-size: 14px;\n  line-height: 100px;\n  text-align: center;\n  background: -webkit-linear-gradient(#2492b7, #2EFFDA);\n  background: -o-linear-gradient(#2492b7, #2EFFDA);\n  background: -moz-linear-gradient(#2492b7, #2EFFDA);\n  background: linear-gradient(#2492b7, #2EFFDA);\n  margin: 22.5px 22.5px;\n  overflow-y: hidden;\n  -webkit-animation: spin 3s linear infinite;\n  -moz-animation: spin 3s linear infinite;\n  animation: spin 3s linear infinite; }\n\n.circleChartOuter2 {\n  position: relative;\n  width: 100px;\n  height: 100px;\n  border-radius: 50%;\n  font-size: 14px;\n  line-height: 100px;\n  text-align: center;\n  background: gray;\n  background: gray;\n  background: gray;\n  background: gray;\n  overflow-y: hidden;\n  margin: 22.5px 22.5px;\n  -webkit-animation: spin 3s linear infinite;\n  -moz-animation: spin 3s linear infinite;\n  animation: spin 3s linear infinite; }\n\n@-moz-keyframes spin {\n  100% {\n    -moz-transform: rotate(360deg); } }\n\n@-webkit-keyframes spin {\n  100% {\n    -webkit-transform: rotate(360deg); } }\n\n@keyframes spin {\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n.circleChartInner {\n  position: absolute;\n  top: 6%;\n  left: 6%;\n  width: 87.5px;\n  height: 87.5px;\n  border-radius: 50%;\n  line-height: 87.5px;\n  background: white;\n  margin: auto auto;\n  -webkit-animation: spin2 3s linear infinite;\n  -moz-animation: spin2 3s linear infinite;\n  animation: spin2 3s linear infinite; }\n\n@-moz-keyframes spin2 {\n  100% {\n    -moz-transform: rotate(-360deg); } }\n\n@-webkit-keyframes spin2 {\n  100% {\n    -webkit-transform: rotate(-360deg); } }\n\n@keyframes spin2 {\n  100% {\n    -webkit-transform: rotate(-360deg);\n    transform: rotate(-360deg); } }\n\n.verticalLine {\n  position: absolute;\n  width: 2px;\n  margin: 20px 0 0 0;\n  height: 144px;\n  display: inline-block;\n  background-color: rgba(22, 0, 50, 0); }\n\nhr {\n  border: 1px solid rgba(22, 0, 50, 0.1); }\n\n/*Dashboard Health*/\n.widgetHalf {\n  font-family: 'Roboto', sans-serif;\n  font-weight: 300;\n  color: rgba(22, 0, 50, 0.6);\n  width: 42.6%;\n  margin: 0 1.5% 3% 1.5%;\n  background-color: white;\n  display: inline-block;\n  border: 1px solid rgba(95, 89, 123, 0.15);\n  box-shadow: 5px 5px 10px rgba(95, 89, 123, 0.15);\n  padding: 0% 2% 2% 2%;\n  border-radius: 5px;\n  height: 380px;\n  overflow-y: scroll; }\n\n.healthWidgetClosed {\n  font-family: 'Roboto', sans-serif;\n  font-weight: 300;\n  color: rgba(22, 0, 50, 0.6);\n  width: 42.6%;\n  margin: 0 1.5% 3% 1.5%;\n  background-color: white;\n  display: inline-block;\n  border: 1px solid rgba(95, 89, 123, 0.15);\n  box-shadow: 5px 5px 10px rgba(95, 89, 123, 0.15);\n  padding: 0% 2% 0% 2%;\n  /*border-radius: 5px;*/\n  height: 70.5px;\n  margin-bottom: 363px; }\n\n.fixedHeader {\n  position: absolute;\n  padding-top: 20.5px;\n  margin-left: -2px;\n  z-index: 1;\n  width: 32.25vw;\n  background-color: white; }\n\n.fixedHeader h2 {\n  padding-left: 5px; }\n\n.healthContent {\n  margin-top: 90px; }\n\ndiv.widgetHalf h2 {\n  font-weight: bold;\n  color: rgba(22, 0, 50, 0.8);\n  letter-spacing: 1.5px;\n  display: inline-block;\n  text-align: left; }\n\ndiv.widgetHalf i {\n  color: rgba(22, 0, 70, 0.8);\n  float: right;\n  margin-left: 2.5%; }\n\n.healthWidget h3 {\n  font-family: 'Merriweather Sans', sans-serif;\n  display: inline-block; }\n\n.healthWidget i.fa-desktop:before {\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  color: transparent;\n  -webkit-background-clip: text;\n  background-clip: text; }\n\n.healthWidget i.fa-desktop {\n  float: left;\n  padding: 5px 12.5px 0 0;\n  margin-left: 0; }\n\n.healthWidget p {\n  font-size: 12px;\n  display: inline-block;\n  max-width: 240px;\n  white-space: nowrap;\n  overflow-x: scroll; }\n\np.offlineBG {\n  text-align: center;\n  font-family: 'Merriweather Sans', sans-serif;\n  font-size: 12px;\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  display: inline-block;\n  width: 150px;\n  padding: 1% 2%;\n  color: white;\n  border-radius: 25px; }\n\n.floatRight {\n  float: right; }\n\n.moveUp {\n  position: relative;\n  margin-right: 31px; }\n\n.healthHR {\n  margin: 20px 0 20px 0; }\n\n.healthHR2 {\n  margin-bottom: 0; }\n\n/*Dashboard Live Feed */\n.healthWidget i.fa-server:before {\n  background: -webkit-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -o-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: -moz-linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  background: linear-gradient(135deg, #6F37B2, #6F37B2 30%, #FF9012);\n  color: transparent;\n  -webkit-background-clip: text;\n  background-clip: text; }\n\n.healthWidget i.fa-server {\n  float: left;\n  padding: 5px 12.5px 0 0;\n  margin-left: 0; }\n\np.completedBG {\n  font-family: 'Merriweather Sans', sans-serif;\n  font-size: 16px;\n  text-align: center;\n  background: -webkit-linear-gradient(135deg, #2492b7, #2492b7 30%, #2EFFDA);\n  background: -o-linear-gradient(135deg, #2492b7, #2492b7 30%, #2EFFDA);\n  background: -moz-linear-gradient(135deg, #2492b7, #2492b7 30%, #2EFFDA);\n  background: linear-gradient(135deg, #2492b7, #2492b7 30%, #2EFFDA);\n  display: inline-block;\n  color: white;\n  width: 115px;\n  padding: 0.5% 2%;\n  border-radius: 25px; }\n\n.moveUp2 {\n  position: relative;\n  margin-right: 18px; }\n\n.liveFeedContent {\n  margin-top: 90px; }\n\n@media (max-width: 1320px) {\n  .widgetHalf {\n    width: 92.5%; }\n  .fixedHeader {\n    width: 69.75vw; }\n  .healthWidgetClosed {\n    margin-bottom: 3%; }\n  .healthWidget h3 {\n    padding-top: .75%;\n    font-size: 16px; }\n  .healthWidget p.indent {\n    padding-left: 2%;\n    margin-top: -.25%; }\n  .healthWidget p.moveUp {\n    padding-left: 2%;\n    padding-top: 1.25%; }\n  .healthWidget p.moveUp2 {\n    padding-left: 2%;\n    padding-top: 1.25%; } }\n\n@media (max-width: 1250px) {\n  div.widget i.fa-database:before {\n    font-size: .7em; }\n  div.widget i.fa-file:before {\n    font-size: .7em; }\n  div.widget i.fa-ambulance:before {\n    font-size: .7em; }\n  div.widget i.fa-archive:before {\n    font-size: .7em; }\n  div.widget i.fa-server:before {\n    font-size: .7em; }\n  div.widget i.fa-desktop:before {\n    font-size: .7em; }\n  div.widget i.fa-camera:before {\n    font-size: .7em; }\n  div.widget i.fa-check:before {\n    font-size: .7em; }\n  .widget p {\n    font-size: 14px; }\n  .widget h3 {\n    padding-bottom: 0%; }\n  .widget {\n    width: 25.9%; }\n  .navLeft h1, .navLeft a {\n    font-size: 20px;\n    letter-spacing: normal; }\n  .navLeftGone h1, .navLeftGone a {\n    font-size: 20px;\n    letter-spacing: normal; }\n  .nonLinkNav h1, .nonLinkNav a, .nonLinkNav i {\n    font-size: 20px;\n    letter-spacing: normal; }\n  .miniNavLinks h1, .miniNavLinks a {\n    font-size: 16px;\n    letter-spacing: normal; }\n  .healthWidget p {\n    max-width: 150px; } }\n\n@media (max-width: 920px) {\n  div.widget p {\n    font-size: 10px; }\n  .navLinks {\n    width: calc(100% - 325px);\n    margin-left: 25px; }\n  .navLeft a, .navLeft h1 {\n    letter-spacing: .5px;\n    line-height: 2.75;\n    font-size: 16px;\n    display: inline; }\n  .bodyContent {\n    margin: 0 auto 0 auto;\n    width: 100%;\n    padding-top: 100px; }\n  .bodyContent2 {\n    margin: 0 auto 0 auto;\n    width: 100%; }\n  div.fixedHeader {\n    width: 94vw; } }\n\n@media (max-width: 700px) {\n  .navLinks {\n    width: calc(100% - 225px);\n    margin-left: 0px;\n    min-width: 0px; }\n  .navLeft a, .navLeft h1 {\n    letter-spacing: 0px;\n    line-height: 2.75;\n    font-size: 12px;\n    display: inline; } }\n", ""]);
 
 // exports
 

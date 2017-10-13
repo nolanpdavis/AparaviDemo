@@ -34,21 +34,23 @@ export default class Navbar extends Component {
 				<div className={this.props.visible}>
 					<img className="aparaviLogo" src={logo} alt="Aparavi Logo"/>
 					<div className="navLinks">
-						<NavLink to='/' exact activeClassName="activeNavLink"><i className="fa fa-tachometer" aria-hidden="true"></i><h1>Dashboard</h1></NavLink>
-						<NavLink to='/recover' activeClassName="activeNavLink"><i className="fa fa-ambulance" aria-hidden="true"></i><h1>Recover</h1></NavLink>
+						<div className="nonLinkNav">
+							<h1>Dashboard</h1>
+						</div>
+						<div className="nonLinkNav">
+							<h1>Recover</h1>
+						</div>
 						<div className="nonLinkNav" onClick={this.handleAdminClick.bind(this)}>
-							<i className="fa fa-university fa-lg" aria-hidden="true"></i>
 							<h1>Administration</h1>
-							{(this.state.adminIsClicked) ? <i className="fa fa-caret-down fa-lg caretIcon1" aria-hidden="true"></i> : <i className="fa fa-caret-right fa-lg caretIcon1" aria-hidden="true"></i>}
 						</div>
-						{this.state.adminIsClicked && <AdminNav/>}
+						{/*{this.state.adminIsClicked && <AdminNav/>}*/}
 						<div className="nonLinkNav" onClick={this.handleSettingsClick.bind(this)}>
-							<i className="fa fa-cogs fa-lg " aria-hidden="true"></i>
 							<h1>Settings</h1>
-							{(this.state.settingsIsClicked) ? <i className="fa fa-caret-down fa-lg caretIcon1" aria-hidden="true"></i> : <i className="fa fa-caret-right fa-lg caretIcon1" aria-hidden="true"></i>}
 						</div>
-						{this.state.settingsIsClicked && <SettingsNav/>}
-						<NavLink to='/logout' activeClassName="activeNavLink"><i className="fa fa-sign-out fa-lg" aria-hidden="true"></i><h1>Logout</h1></NavLink>
+						{/*{this.state.settingsIsClicked && <SettingsNav/>}*/}
+						<div className="nonLinkNav">
+							<h1>Logout</h1>
+						</div>
 					</div>
 				</div>
 			</div>
